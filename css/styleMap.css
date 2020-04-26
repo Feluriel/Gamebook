@@ -1,0 +1,34 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#container {
+    visibility: hidden;
+    max-width: 400px;
+    max-height: 200px;
+    position: absolute;
+    z-index: 10;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #0F0F0F;
+    border: 1px solid #2F2F2F;
+    border-radius: 5px;
+    opacity: 75%;
+}
+
+#text {
+    margin: 10px;
+    color: #fff;
+    font-weight: 450;
+    line-height: 20px;
+}
+#close {
+    width: 25px;
+    height: 25px;
+    color: #0F0F0F;
+    background-color: #E0E0E0;
+    position: relative;
+    right: 0;
+    top: 0;
+    margin: 10px;
+}
