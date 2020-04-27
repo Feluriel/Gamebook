@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!--
+     Icon Do GameBook
+
+<link rel="shortcut icon" href="favicon.ico">
+
+-->
+
+<title>The Age of Exiles</title>
+<!--
+
+Template 2085 Neuron
+
+http://www.tooplate.com/view/2085-neuron
+
+-->
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+<!-- Main css -->
+<link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+body{
+     background: url('images/textura.jpg');
+	color:#444;
+	font-size:12px;
+	color: #333;
+    font-family: 'Oswald', sans-serif;
+}
+  
+.booklet           {
+	width:900px;
+	height:607px;
+	position:relative;
+	margin:0 auto 10px;
+	box-shadow:0px 0px 1px #fff;
+
+}
+.booklet .b-wrap-left  {
+	background:#fff url(images/left_bg.jpg) no-repeat top left;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-topleft:10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.booklet .b-wrap-right {
+	background:#efefef url(images/right_bg.jpg) no-repeat top left;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.booklet .b-counter {
+	bottom:10px;
+	position:absolute;
+	display:block;
+	width:90%;
+	height:20px;
+	color:#222;
+	text-align:center;
+	font-size:12px;
+	padding:5px 0 0;
+	background:transparent;
+	-moz-box-shadow:0px -1px 1px #fff;
+	-webkit-box-shadow:0px -1px 1px #fff;
+	box-shadow:0px -1px 1px #fff;
+	opacity:0.8;
+}
+.book_wrapper{
+	margin:0 auto;
+	padding-top:50px;
+	width:905px;
+	height: 620px;
+	position:relative;
+	background:transparent url(images/bg.png) no-repeat 9px 27px;
+     text-align: justify;
+}
+.book_wrapper h1{
+	color: black;
+	margin:5px 5px 5px 15px;
+     font-size:24px;
+     font-family: 'Times New Roman', Times, serif;
+	padding-bottom:7px;
+     text-transform: uppercase;
+     font-weight: 700;
+}
+.book_wrapper p{
+	font-size:15px;
+	margin:5px 5px 5px 15px;
+}
+.book_wrapper a.article,
+.book_wrapper a.demo{
+	background:transparent url(images/circle.png) no-repeat 50% 0px;
+	display:block;
+	width:95px;
+	height:41px;
+	text-decoration:none;
+	outline:none;
+	font-size:16px;
+	color:#555;
+	float:left;
+	line-height:41px;
+	padding-left:47px;
+}
+.book_wrapper a.demo{
+	margin-left:50px;
+}
+.book_wrapper a.article:hover,
+.book_wrapper a.demo:hover{
+	background-position:50% -41px;
+	color:#13386a;
+}
+.book_wrapper img{
+	margin:10px 0px 5px 35px;
+	width:300px;
+	padding:4px;
+}
+a#next_page_button,
+a#prev_page_button{
+	display:none;
+	position:absolute;
+	width:41px;
+	height:40px;
+	cursor:pointer;
+	margin-top:-20px;
+	top:50%;
+	background:transparent url(images/buttons.png) no-repeat 0px -40px;
+}
+a#prev_page_button{
+	left:-30px;
+}
+a#next_page_button{
+	right:-30px;
+	background-position:-41px -40px;
+}
+a#next_page_button:hover{
+	background-position:-41px 0px;
+}
+a#prev_page_button:hover{
+	background-position:0px 0px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PRE LOADER -->
+
+<div class="preloader">
+     <div class="sk-spinner sk-spinner-wordpress">
+          <span class="sk-inner-circle"></span>
+     </div>
+</div>
+
+<!-- Navigation section  -->
+
+
+<!-- Home Section -->
+<section>
+<div class="book_wrapper">
+     <a id="next_page_button"></a>
+     <a id="prev_page_button"></a>
+      
+     <div id="mybook" style="display:none;">
+          <div class="b-load">
+               <div>
+                    <br><br><br>
+                    <h1>Capítulo 1</h1>
+                    <p>Hoje faz três dias desde que os quatro foram  banidos de sua  terra, está cada vez mais difícil, 
+                         não só tem os 
+                         desafios para enfrentar como também precisam achar algo para comer, estão cada vez mais fracos  
+                         e impotentes,
+                         mas todos eles têm uma grande determinação para continuar e também uma enorme sede de vitória para poderem 
+                         voltar aos seus lares…
+                         <p>-Rinorí: Você está pronto para amanhã Hiroki?</p>
+                         <p>-Hiroki: Sim, já temos tudo que é necessário para amanhã finalmente chegou a hora.</p>
+                         <p>Nesse exato momento, viram um sinal do primeiro desafio, uma ruína poucos metros apareceu em seus caminhos.</p>
+                    </p>
+               </div>
+               <div>
+                    <img src="images/ruins.png" alt=""/>
+                    <p> 
+                         Seguiram rumo a ela e tinha 4 símbolos em  seu portal, mas a ruína dava exatamente em um labirinto, onde seus 
+                         sentidos seriam testados, 
+                         Entraram e deram de cara com um livro aberto que dizia: “ Quatro caminhos, todos ao lado, um é bom o outro ruim não
+                         confie nos outros ou em ninguém seu maior inimigo pode ser você mesmo”.</p>
+                    </p>
+               </div>
+               <div>
+                    <img src="images/lab.jpeg" alt="" />
+                    <p>-Hiroki: Quatro entradas, quatro pessoas</p>
+                    <p>-Elinthy: E agora o que vamos fazer?</p>
+                    <p>-Scarlett: Acho que não podemos nos separar.</p>
+               </div>
+               <div>
+                    <img src="images/runeRinori.png" alt="">
+                    <p>-Rinorí: Eu vou testar a porta com símbolo da lua a que der certo, entramos todos</p>
+               </div>
+               <div>
+                    <img src="images/runeHiroki.png" alt="">
+                    <p>-Hiroki: Eu vou pela de Floco de gelo .</p>
+               </div>
+               <div>
+                    <br>
+                    <img src="images/runeScarlett.png" alt="">
+                    <p>-Scarllet: Eu vou testar a da folha talvez possa ter algo nela.</p>
+               </div>
+               <div>
+                    <img src="images/runeElinthy.png" alt="">
+                    <p>-Elinthy: Tentarei a das chamas e veremos no que dá.</p>
+               </div>
+               <div>
+                    <br><br><br>
+                    <p>Cada um então testou um caminho diferente, Hiroki foi pelo caminho do floco de gelo mas quando ele tentou abrir a porta ela se desfaz em suas mãos, já Rinorí optou por testar o caminho com a porta do livro, porém quando ele tentou abrir a porta a mesma caiu em um abismo sem fim, Scarlett testou a porta com a folha entalhada mas quando tentou abri-la também não teve êxito sua porta sumiu do nada. Tudo parecia ir de mal a pior afinal nenhum deles havia conseguido achar o caminho certo eles começaram a perder a esperança quando de repente Elinthy grita.</p>
+               </div>
+               <div>
+                    <img src="images/lab2.jpg" alt="" />
+                    <p>Elinthy: Consegui, achei o caminho certo venham logo!</p>
+                    <p>Elinthy testou a porta com símbolo das chamas então ela se abriu, lá dentro havia enormes paredes e um labirinto que não parecia ter fim cada um olhou pra um lado e começaram a andar quando eles menos esperavam, o chão começou a tremer,apareceram várias criaturas com suas formas confundindo-lhes a mente.</p>
+                    <p>- Hiroki:Pessoal o que está acontecendo por aqui?</p>
+                    <p>- Rinorí: Onde estão os verdadeiros?</p>
+                    <p> -Scarlett: Eu sou a verdadeira acredite em mim</p>
+               </div>
+               <div>
+                    <p>Mas as criaturas que tomaram forma de seus corpos repetiam as mesmas coisas que os verdadeiros. 
+                         Então Hiroki teve a ideia de usar seu poder, ele pegou seu cetro e espalhou gelo por toda parte, 
+                         pensando em quem fosse esperto se defenderia, 
+                         assim que Rinorí percebeu seu movimento ele invocou um grande urso polar que ficou de guarda a sua frente,
+                          Elinthy empunhou sua espada e fez picadinho do gelo de Hiroki, Scarlett convocou um espírito da floresta que fez um casulo de árvore em volta de si.</p>
+                    
+                        <img src="images/espada.png " height= "200px" width="200px" alt="" />  
+               </div>
+               <div>
+                    <img src="images/7.jpg" alt=""/>
+               </div>
+               <div>
+                    <p>Todas as criaturas a sua volta se dissiparam como poeira.</p>
+                    <br>
+               
+                    <p>-Rinorí: Caramba Hiroki poderia ter avisado</p>
+                   
+                    <p>-Elinthy: Bem pensado, admiro sua atitude</p>
+                    
+                    <p>-Scarlett: Muito bom Hiroki!</p>
+                    
+                    <p>-Hiroki: Essa foi por pouco, eu não tinha certeza se iria dar certo.</p>
+                    <br>
+                    
+                    <p>Continuaram o caminho, e mais a frente surgiu uma coluna separando Hiroki e Scarlett de um lado e Elinthy e Rinorí de outro, 
+                         ambos começaram a chamar uns aos outros
+                         </p>
+                     <p>De um lado Hiroki e Scarlet tentaram seguir em frente na esperança de encontrá-los no caminho, 
+                          do outro Elinthy e Rinorí tentaram destruir o muro.
+                         </p>
+                   
+               </div>
+               <div>
+                    <img src="images/dentrodolabirt.jpg" >
+                    <p>-Elinthy: É inútil, quanto mais tempo ficarmos aqui atacando mais tempo vamos perder, 
+                         vamos seguir em frente talvez encontramos eles no caminho</p>
+
+                    <p>-Rinorí: Sim.</p>
+                        
+                    <p>Então assim todos eles seguiram pelo labirinto, 
+                         até que Hiroki e Scarlett encontram Rinorí gravemente ferido no labirinto.</p>
+               </div>
+               <div>
+                    <p>-Scarlett: Rinorí!</p> 
+                    <p>-Hiroki: Espere Scarlet pode ser mais um daquelas criaturas.</p>
+                    <p>-Rinorí: Me ajudem… Por favor eu não quero morrer…</p>
+                    <br>
+                    <p>Nesse momento Hiroki lembra de seus passatempos com Rinorí.</p>
+                    <br>
+                    
+                    <p>-Hiroki: Pedra?</p>
+                    <p>-Rinorí: O que??</p>
+                    <p>-Hiroki: Pedra?</p>
+                    <p>-Rinorí: Me ajude e pare com isso.</p>
+                    <p>-Hiroki: PEDRA!?</p>
+                    <p>-Scarlett: Hiroki o que é isso? Vamos ajudá-lo logo..</p>
+               </div>
+               <div>
+                    <img src="images/cetro.png" height="290px" width="250px" alt="" />
+                    
+                    <p>Hiroki enfia seu cetro no pescoço de Rinorí, ele morre revelando a criatura que estava se passando por Rinorí.</p>
+     
+                    <p>-Hiroki: Eu sabia</p>
+                    <p>-Scarlett:O que foi tudo isso?</p>
+                    <p>-Hiroki: Quando éramos crianças eu e Rinorí brincávamos de cavaleiros,
+                         e toda vez que alguém entrava no reino deveria dizer “Montanha” quando o outro dissesse “Pedra”, 
+                         para assim nenhum intruso entrar em nosso reino.</p>
+               </div>
+               <div>
+                    <p>-Scarlett: Você confiou em uma brincadeira para identificá-lo!? 
+                         Não sei se fico surpreendida com sua lógica ou assustada pois se ele não lembrasse disso estaria morto.</p>
+                    <p>-Hiroki: Se o conheço bem ele não morreria com essa facilidade mesmo mobilizado ele ainda conseguiria invocar alguma coisa</p>
+                    <p>-Scarlett: Então vamos logo esse labirinto não vai  terminar sozinho!</p>
+               </div>
+               <div>
+                    <p>A situação de Rinorí e Elinthy também não era das melhores, 
+                         deram voltas e mais voltas e nenhum caminho era o certo, 
+                         então Rínorí se dispersou por um momento, 
+                         e Elinthy estava empunhando uma espada contra ele.</p>
+                    <p>-Rinorí: O que você está fazendo??</p>
+                    <p>-Elinthy: Você pensou mesmo que eu acreditaria nessa sua encenação barata, 
+                         você é o pior de todos aqui e você tem que concordar com isso, 
+                         ninguém aqui gosta de você muito menos eu mais se eu te matar aqui e agora,
+                         eu posso achar uma forma de sair mais rápido daqui eliminando o mal do meu caminho.</p>
+                    <p>-Rinorí: Como você pode me julgar desse jeito, voce é ridicula, 
+                         voce acha mesmo que eu vou deixar você me matar, é uma estúpida.</p>
+               </div>
+               <div>
+                    <p>Elinthy atacou Rinorí, golpeou pelo lado direito, 
+                         mas Rinorí invocou um leão, que mordeu uma perna de Elinthy, ela urrou de dor, 
+                         mas diferiu um soco na cara do leão, e o partiu ao meio com sua espada.</p>
+
+                    <p>-Elinthy: Você é ingênuo Rinorí chega ser encantador, mas eu não tenho paciência!</p>
+
+                    <p>Elinthy avançou com a espada e sua mira acertaria o coração de Rinorí. Mas…</p>
+
+                    <p>-Elinthy: Rinoríii!</p>
+     
+                    <p>A verdadeira Elinthy apareceu e enfiou a espada no coração daquela criatura que era sua cópia.</p>
+   
+                    <p>-Rinorí: Você me assustou muito Elinthy!</p>
+
+                    <p>-Elinthy: Me desculpa eu estava tentando achar uma saída,mas quando olhei você já não estava mais lá,
+                          eu fiquei te procurando e vi o que estava acontecendo, ainda bem que cheguei a tempo.</p>
+
+               </div>
+               <div>
+                    <br>
+                    <p>-Rinorí: Muito obrigado, melhor continuarmos nossa jornada.</p>
+
+                    <br>
+                    
+                    <p>Os dois seguiram rumo a uma parede que tinha tijolos meios soltos, 
+                         então Elinthy deu um chute neles e saíram voando revelando a saída, do outro lado depois de dar tantas voltas Hiroki e Scarlett 
+                         também aparecem, e assim todos passam o primeiro desafio, e conseguem sair da ruína,</p> 
+
+                    <br>
+
+                    <p>Quando saíram da ruína, contaram sobre o que tinham acontecido com cada um, então seguiram rumo, ao resto da jornada.</p>
+               </div>
+               <div>
+                    
+                    <img src="images/ruins2.png" height="410px" width="360px" alt="">
+               
+                    
+               </div>
+               <div>
+                    <br><br>
+                    <h1>Capitulo 2</h1>
+                    <br>
+                    <p>
+                         Tempo se passou após a primeira jornada dos exilados, até que. 
+                         Chegaram em um vilarejo abandonado, todo queimado pelo fogo com resto mortais.
+                         </p>
+                    <br>
+                         <img src="images/vills.jpg" height="200px" width="300px" alt="">
+                    
+               </div>
+               <div>
+                    <p>-Scarlett: Eu consigo sentir suas almas gritando, agonia e dor é tudo que eu sinto o que aconteceu aqui?</p>
+               <p>-Elinthy: Guerra, veja os sinais, as pisadas vieram do norte, olhe as casas queimaram e colocaram o povo reunido, 
+                         as pegadas de sangue, mataram a maioria ali.</p>
+               <p>-Hiroki: Não é atoa que que Miratry é conhecido como Vale das Almas mortas.</p>
+               <p>-Rinorí: Isso foi literalmente um massacre, olha isso são brinquedos, haviam crianças aqui!</p>
+               <br>
+               <p>No meio de toda essa tensão. Scarlett começou a chorar, a pressão era tão grande que a fez desmaiar.</p>
+               <br>
+               <p>-Hiroki: SCARLETT! Por favor acorde, não desmaie agora!</p>
+
+               </div>
+               <div>
+                    <p>A terra começou a rachar, e dividiu o vilarejo ao meio por uma faixa preta brilhante vindo de dentro do solo</p>
+                    <p>-Elinthy: Vamos para aquela casa, eu vou carregar Scarlett, vão agora!</p>
+                    <p>-Rinorí: Vamos pessoal não podemos perder tempo.</p>
+                    <p>Todos entraram em uma casa que não estava tão queimada no vilarejo, 
+                         Elinthy deitou Scarlett na cama, e Hiroki disse:</p>
+                    <p>-Hiroki: Vamos montar uma barricada na porta, 
+                              caso algo tente passar podemos ganhar tempo, pra fazer algo.</p>
+                    <p>-Rinorí: Tem razão, tranque todas as janelas também</p>
+                    <p> Rinorí invocou uma beast-leostrix, para que guardasse a frente da casa, pelo lado de fora, pois seus poderes já estavam bem drenados, 
+                              pegaram todos os móveis que tinha na casa e montaram uma barricada na porta, trancaram as janelas, 
+                              so ouviam o vento rugindo forte, causando preocupação em todos, </p>
+               </div>
+               <div>
+                    <p>Scarlett ainda desmaiada em uma cama pequena, Elinthy, 
+                    Rinorí e Hiroki aguardavam o retorno do bestiário, andando de um lado para o outro.</p>
+
+                    <img src="images/bestiario.jpg" height="340px" alt="">
+
+               </div>
+               <div>
+                    <p>-Hiroki: Eu nao sei mais o que podemos fazer já estamos aqui a dias nesse vale e qual o propósito? 
+                         nao consigo entender</p>
+
+                                        <!-- Pensamento -->
+                                   <br>
+                    <p>“Dentro de sua mente ele sentia uma raiva crescendo por não saber o que fazer para ajudar seus companheiros tão pouco a si mesmo, 
+                              via Scarlett desmaiada naquela cama pequena e sentiu vontade de beijá-la, mas o que os outros diriam, 
+                              parou para analisar um momento o que estava acontecendo em sua volta, olhou para Elinthy os círculos dos olhos dela estavam bem fundos ela passava noites acordadas patrulhando, 
+                              para ver se encontrava alguma ameaça, quando eles saíssem dali ele teria que agradecê-la por manter todos a salvo.
+                    </p>
+               </div>
+               <div>
+                    <p>
+                              Rinorí seu amigo de muito tempo, olhava para Elinthy e para janela lá fora preocupado com o retorno de sua beast,
+                         parecia estar exausto e preocupado com sua magia drenada, 
+                         e que levaria o esforço de cada um de seus companheiros, fazendo de tudo para ajudá-los.”</p>
+                              <br>
+                                        <!-- Pensamento -->
+                    <p>- Rinorí: Eu nunca imaginei que seria tão difícil assim passar por isso tudo, 
+                              mas vamos conseguir é só não perdermos o foco tudo vai se ajustar.</p>
+                              <br>
+                    <p>“Rinorí nao aguentava mais, aquilo que a falsa Elinthy disse o afetará mais que o necessário, 
+                                   mais ele sabia que aquelas palavras não eram reais e que Elinthy não fazia ideia de que aquilo havia ocorrido,
+                                   ele olhava pro seu rosto e via uma mulher exausta, mas mesmo assim muito linda ele faria de tudo para lutar por ela, 
+                                   o outro lado da sala seu amigo.</p>    
+               </div>
+               <div>
+                    <p>
+                         Hiroki estava bem abatido, 
+                    mas duvidava que ele cairia em cima de Scarlett a qualquer momento, 
+                    mais o conhecendo bem ele seguraria a onda, sua coruja ainda não havia voltado,
+                    começava a se preocupar com que estava prestes a vir, apesar de tudo daria sua vida aos seus companheiros, 
+                    pois depois de uma longa jornada estava aprendendo a criara afeto com aquelas três pessoas que se conheceram por um infeliz acaso.”</p>
+                    </p>
+     <br>
+                    <p> -Elinthy: Vamos nos preparar pessoal, vamos permanecer juntos até o último de nós cair.</p>
+                    <br>
+                    <p>“Cansada essa era a melhor palavra que definia Elinthy, estava completamente exausta, 
+                         horas acordada de madrugada vigiando se algo os atacaria a noite, 
+                         por ser mais velha sabia que carregava um peso a mais, que ela se </p>
+               </div>
+               <div>
+                         
+                    <!-- Pensamento -->
+
+               <p> achasse mais que os outros pois de um tempo pra cá não conseguia se sentir bem de forma alguma, 
+               andava mais estressada que o habitual, mas depois de tanto sofrimento que passou em sua vida ali estava três vidas com as quais ela aprendera a lidar, 
+               Rinorí havia ficado muito assustado após a Ruína, 
+               mas ele não quis comentar sobre o assunto sabia que ele estava com raiva, 
+               e sabia que havia algo a mais em relação aos sentimentos dele.
+               </p>
+               <p>
+                    Hiroki fingia estar despreocupado mas ela sabia que não, 
+                    pois ele gostava de usar uma máscara de durão, e Scarlett ainda continuava desmaiada para piorar a situação, 
+                    todos estavam horríveis mais o pior ainda estaria por vir.
+                    A beast de Rinorí voltou, muito assustada e sem uma perna, 
+                    ele bateu seu cajado nela e ela se dissipou, 
+                    ao mesmo tempo Scarllet urrou de dor na cama se contorcendo mas mesmo assim, ainda desacordada.”
+               </p>
+               </div>
+               <div>
+                    <!-- Pensamento -->  
+
+               <p>Scarlett se deixou levar de mais, 
+               ela escutava as almas gritando e chorando naquela vila que perdeu completamente a noção do que fazer, 
+               e deixou que as almas e a terra devorarem sua alma, 
+               ali caída no chão ela viu a cena do que havia acontecendo, 
+               morte, cinzas, dor, ódio gélido, uma força de onde não sabia vim, 
+               os soldados corriam, não, não eram soldados, eram criaturas piores do que haviam encontrado na Ruína, 
+               e em meio a tanto desespero ela viu uma criança agachada em baixo de alguns escombros seu rosto era de puro terror, 
+               ela não deveria falar com nenhuma daquelas almas, mas então correu até aquela criança, era uma linda menina, 
+               de olhos verdes cabelos castanhos enrolados, Scarlett a pegou e disse:</p>
+               <br>
+               <p>-Scarlett: Oi menina não tenha medo, por favor me diga o que há de errado</p>   
+               </div>
+               <div>
+                    <p>-Menina: Vai embora moça foge em quando dá tempo ele está aqui, ele mal, 
+                         matou meus pais enquanto eu fugia ele vai vim me buscar, eu estou com medo, 
+                         moça me mate antes que ele me faça sofrer, por favor, 
+                         liberte a minha alma eu não quero sofrer.</p>
+                    <p>-Scarlett: Eu não posso te matar por favor não me peça isso.</p>
+                    <p>-Menina: Há algumas coisas moça que não tem que ser entendidas, apenas faça e poupe minha alma.</p>
+                    <br>
+                    <p>A menina pegou uma adaga que carregava, e pôs na mão de Scarlett, pegou seu ursinho de pelúcia o segurou forte e disse:</p>
+                    <p>-Menina: Adeus, Rubyt, mamãe, papai, esperem por mim.</p>
+                    <br>
+                    <p>Scarlett estava entre soluços mal conseguia proferir qualquer palavra, mas ela se esforçou e perguntou qua.. qual seu nome?
+                    </p>
+               </div>
+               <div>
+                    <p> -Menina: Dana moça, meu nome é Dana. A menina disse com os olhos escorrendo lágrimas,</p>
+                    <p> -Scarlett: Descanse em paz Dana, sempre me lembrarei de você. </p>
+                    <p> Então Scarlett perfurou o coração da garota,
+                         com a adaga que ela dera, em seguida caiu de joelhos gritando e chorando, 
+                         segurando a adaga firme em suas mãos.</p>
+                    <p>Já fazia uns vinte minutos que Scarlett se contorcia na cama Hiroki desesperado gritava seu nome a sacudindo, 
+                         mais ela não acordava, Rinorí tentava acalmar Hiroki dizendo:</p>
+                         <br>
+                    <p>-Rinorí: Calma Hiroki, ela deve estar em transe por conta de onde estamos, ela disse que estava sentindo as almas deste lugar ela vai voltar pra gente,
+                          precisamos estar calmos e tomar conta dela agora. </p>
+                    
+               </div>
+               <div>
+                    <p> Elinthy que estava ao pé da cama segurando as pernas de Scarlett disse:</p>
+                    <br>
+                    <p>-Elinthy: Ele tem razão Hiroki não se desespere vamos fazer de tudo pra manter ela bem, 
+                         Rinorí olhe a janela.
+                    </p>
+                    <p>Scarlett continuava lá caída, aquele solo se tornando negro, 
+                         até que uma presença maligna apareceu entre, 
+                         uma névoa de cinzas e disse:</p>
+                    <p>-Voz: Ora, ora, ora o que temos uma aqui, uma linda jovem, ou devo dizer Scarlett.</p>
+                    <p>Aquela voz era maligna, Scarlett não fazia a menor ideia do que estava acontecendo, então perguntou:</p>
+                    <p>-Scarlett: Como você sabe o meu nome? qu...quem é você?</p>
+                    <br>
+                    <p>Aquela figura olhou para Scarlett e disse: </p>
+               </div>
+               <div>
+                    <p>-Voz: Eu sou Magnus Nightshade, aquele que lançou a profecia em você e seus companheiros, 
+                         quem diria que pobres mortais como vocês seriam atingidos tão facilmente, 
+                         com seus corações tolos..</p>
+                         
+               <!--
+               <a href="histormagn.html" title="História">Ler História Do Magnus</a>
+                    -->
+                    <p> -Scarlett: Do que você está falando? Quer dizer que você foi o culpado de tudo isso, 
+                         qual seu problema com a gente?
+                    </p>
+                    <p>-Magnus: Eu tenho todos os problemas, e tenho meus motivos, ouça bem criança pois eu vou te contar uma história, 
+                         Há muito tempo atrás meu Reino Fall, era conhecido por ser o reino onde havia o conhecimento de todo o mundo. </p>
+                    <p> E os magos de meu reino possuíam domínio elemental, exceto por mim, pois eu domino 
+                         vento, raio, necromancia, toda magia elemental e magia temporal, 
+                         eu quis usurpar o trono de meu reino mais me baniram, por sorte encontrei meu "animalzinho de estimação",
+                         e viajo pelo mundo</p>     
+               </div>
+               <div>
+                    <p> usurpando todos os tronos, mas um horrível dia quando cheguei nesse vilarejo, 
+                    um sábio velho me disse que quatro pessoas de um certo lugar perto desta terra me derrotaria,
+                    então lancei uma profecia para aqueles mais fortes que nasceriam em cada vila aos arredores 
+                    e felizmente foram vocês os meus peões, 
+                    eu estava esperando por vocês, o último desafio é isso que os aguarda,
+                    melhor avisar os seus companheiros, ou eu lhe ofereço algo melhor se torne minha rainha e seus amigos meus súditos, 
+                    faço maravilhas com os poderes de vocês em troca não os mato, pense Scarlett.</p>
+                    <br>
+                    <p>Magnus segurou Scarlett pelo pescoço e a mostrou, saindo pelo mundo ao lado de Magnus,
+                          matando inocentes por puro prazer seus amigos saqueando e matando reino após reino,
+                          ela viu como seriam se falhasse em sua última jornada, 
+                          seriam completamente malignos assim como Magnus, 
+                          sua cabeça começou a latejar ela sentia que morreria ali, 
+                          
+                          </p>
+               </div>
+               <div>
+                    <p>mas não podia abandonar seus amigos tinha que voltar e contar a eles, então ela disse:</p>
+
+                    <p>-Scarlett: Nunca vamos aliar a você. então ela cuspiu em seu rosto, 
+                         seu nariz sangrava e sua cabeça latejava mas então ela ouviu seu nome de longe, 
+                         alguém rugindo seu nome do outro lado de sua alma, Hiroki a chamava, e ela iria até eles.
+                          Então Dana estava perto dela segurou sua mão e disse:</p>
+
+                    <p>-Dana: Isso é por ter salvo minha vida volte para seus amigos.
+                          A  menina apertou sua mão, ela estava voltando para a consciência.</p>
+                    <p>Hiroki perdeu a cabeça quando viu o sangue escorrer do nariz de Scarlett, 
+                         gritou mais do que tudo tomou-a em seu colo e ela chorou e chorou, 
+                         e ficou ali durante um bom tempo sem dizer uma palavra, até que tomou coragem e começou a falar, 
+                         disse que Elinthy estava certa sobre a </p>
+                         
+               </div>
+               <div>
+                    <p> guerra, contou sobre o ocorrido com Dana, 
+                         e falou sobre Magnus a profecia e a visão horrível que ele dera a ela, todos permaneceram calados, 
+                         cada um com um peso em suas costas, pensando em tudo que Scarlett havia dito.</p>
+                         <br>
+                    <p>-Hiroki: Faz muito sentido e realmente é muito difícil digerir isso tudo, 
+                              mas se nós fomos escolhidos tem algum motivo, passamos anos achando que não éramos bons, 
+                              ignorantes a essa profecia, 
+                              mas agora sabemos o motivo e aprendemos muitos em nossa jornada até aqui,</p>
+                    <p>-Elinthy: Sim e de fato ele tem medo se não, não teria dado a oferta de nos aliarmos a ele, 
+                         e te dando essa visão, 
+                         acho que ele está com medo de nós.</p>
+                    <p>-Rinorí: Nós vamos conseguir pessoal, 
+                              vamos vencer ele e não só voltarmos para casa mas também salvar o mundo.</p>
+                    
+               </div>
+               <div>
+                    <p>-Scarlett: Vamos dar o que ele merece, vamos jogar sujo com eles, 
+                         e mostrar o quanto somos realmente maus quando o matarmos.</p>
+                    <p>Todos olharam entre si com um sorriso malicioso no rosto, 
+                         Elinthy levantou sua espada e disse:</p>
+                    <p> -Elinthy: A amizade, que até aqui nos fez fortes!</p>
+                    <p>Rinorí levantou seu cajado e disse:</p>
+                    <p>-Rinorí: A amizade, que até aqui nos fez fortes!</p>
+                    <br>
+                    <p>E dessa forma Hiroki levantou seu cetro e Scarlett sua lança e disseram as mesmas palavras, 
+                         então uma pontada de esperança e coragem brilharam em seus olhos, 
+                         lá fora o vento não rugia mais estava num profundo silêncio, Hiroki achou estranho aquele silêncio, 
+                         então pegou seu cetro e fez sair um floco de neve brilhante e o deu para Scarlett, 
+                         uma promessa silenciosa.</p>
+               </div>
+               <div>
+                    <p>-Hiroki: Vamos ver o que há de errado, preparem-se para qualquer coisa.</p>
+                    <p> Cada um com armas em mão, tiraram a barricada e abriram a porta, 
+                         e lá estava quatro criaturas com corpos esguios e pele encouraçada, 
+                         eram horríveis e muito deformados, ficavam fazendo um barulho muito estranho</p>
+                    <p>-Hiroki: Vocês não se banharão em sangue de nem um de nós pois iremos matar todos 
+                         os que ficarem e nosso caminho.</p>
+                    <p>A criatura soltou um grunhido estridente que chegava a sangrar os ouvidos, 
+                         então as quatro criaturas avançaram, aquela que tinha gritado foi para cima de Hiroki 
+                         projetou garras para fora e o atacou, mas ele bloqueou o golpe com seu cetro,
+                          a criatura avançou por outro lado, Hiroki se esquivou e lançou seu poder sobre a criatura,
+                           gelo se espalhou pelos lados, mas a criatura era mais rápida e já estava às costas de Hiroki 
+                           as garras se projetaram e </p>
+               </div>
+               <div>
+                    <p>arranharam o braço de Hiroki mas assim q as unhas encostaram na pele ele lançou seu 
+                         poder e a criatura virou gelo e com o último golpe de seu cetro partiu a criatura congelada em vários pedaços, 
+                       do outro lado Scarlett usava as plantas para fazer um casulo em volta de uma outra criatura, 
+                       mas a criatura quebrou o casulo com suas unhas e atacou Scarlett, 
+                       deixando um arranhão em sua bochecha ela golpeou um lado da criatura,
+                       jorrando sangue negro a criatura atacou novamente e 
+                       as plantas surgiram prendendo suas mãos e Scarlett perfurou seu coração com a lança, 
+                       Rinorí estava com a criatura mais alta, ele golpeava a criatura de cada lado enquanto a criatura se defendia, 
+                       ele invocou uma pantera, e minutos depois a criatura já estava cansada de lutar contra os dois, 
+                       Rinorí se aproximou e a criatura deu um golpe em sua perna, ele caiu no chão e sua mente estava girando,
+                       mas sua pantera aproveitou da </p>
+               </div>
+               <div>
+                    <p>da distração para pular em cima da criatura e mordê-la toda, 
+                         Elinthy pegou a criatura mais rápida, 
+                         ela foi pra cima da criatura que se esquivou com facilidade de seus golpes, 
+                         com espadas em mão tentou cortar um braço da criatura,
+                         mas a criatura deu uma rasteira em Elinthy e as duas rolaram no chão, 
+                         ficando a criatura por cima agarrou um braço de Elinthy o perfurando, sangue começou a escorrer, mas ela travou a criatura, 
+                         e empunhou sua espada no crânio da criatura,
+                         Elinthy se levantou e a partiu ao meio.  </p>
+                         <br>
+                    <p>Todas as criaturas mortas, 
+                         elas foram mandadas para matá-los, 
+                         e eles já sabiam quem tinha dado a ordem.</p>
+                         <br>
+                    <p> -Scarlett: Temos que prosseguir, não podemos ficar aqui por muito tempo.</p>                    
+               </div>
+               <div>
+                    <p>-Elinthy: Scarlet tem razão, é melhor irmos,
+                         mais algumas batalhas dessas e estaremos acabados para o fim se estivermos cansados ele nos vencerá facilmente.</p>
+                    <p> Pegaram um caminho rumo ao fim do vilarejo, 
+                         e saíram dali o mais rápido que conseguiram estavam todos exaustos mas não iriam desistir tão perto, 
+                         depois de terem conhecido a verdade lutariam até o final.</p>
+
+                       <img src="images/villa.jpg" height="200px" width="200px" alt="">  
+               </div>
+               <div>
+                    <br> <br>
+                    <h1>Capítulo 3</h1>
+                    <br>
+               </div>
+
+
+     </div>
+     </div>
+     <audio src="music/fairytale.mp3" controls autoplay loop>
+     <p>Seu navegador não suporta o elemento audio </p>
+</audio>
+
+</section>
+
+
+<!-- SCRIPTS -->
+
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script src="js/custom.js"></script>
+<script type="text/javascript">
+     $(function() {
+          var $mybook 		= $('#mybook');
+          var $bttn_next		= $('#next_page_button');
+          var $bttn_prev		= $('#prev_page_button');
+          var $loading		= $('#loading');
+          var $mybook_images	= $mybook.find('img');
+          var cnt_images		= $mybook_images.length;
+          var loaded			= 0;
+           
+          $mybook_images.each(function(){
+               var $img 	= $(this);
+               var source	= $img.attr('src');
+               $('<img/>').load(function(){
+                    ++loaded;
+                    if(loaded == cnt_images){
+                         $loading.hide();
+                         $bttn_next.show();
+                         $bttn_prev.show();
+                         $mybook.show().booklet({
+                              name:               null,                            //  
+                              width:              800,                             //  
+                              height:             500,                             //   
+                              speed:              600,                             //  
+                              direction:          'LTR',                           //  
+                                                         //  
+                              next:               $bttn_next,          			//  
+                              prev:               $bttn_prev,          			//  
+                                                     
+                         });
+                         Cufon.refresh();
+                    }
+               }).attr('src',source);XMLDocument
+          });
+          
+     });
+</script>
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    
+    
+
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+ 
+ 
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+		<script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+
+		<link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+</body>
+</html>
