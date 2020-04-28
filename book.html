@@ -29,9 +29,11 @@ http://www.tooplate.com/view/2085-neuron
 
 <!-- Main css -->
 <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.booklet.1.1.0.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
 <style>
 *{
 	margin:0;
@@ -77,7 +79,8 @@ body{
 	display:block;
 	width:90%;
 	height:20px;
-	color:#222;
+	border-top:1px solid #ddd;
+	columns: rgba(34, 34, 34, 0.02);;
 	text-align:center;
 	font-size:12px;
 	padding:5px 0 0;
@@ -199,7 +202,7 @@ a#prev_page_button:hover{
                     </p>
                </div>
                <div>
-                    <img src="images/ruins.png" alt=""/>
+                    <img src="images/ruins.png" alt="" style="width: 70%;"/>
                     <p> 
                          Seguiram rumo a ela e tinha 4 símbolos em  seu portal, mas a ruína dava exatamente em um labirinto, onde seus 
                          sentidos seriam testados, 
@@ -214,8 +217,8 @@ a#prev_page_button:hover{
                     <p>-Scarlett: Acho que não podemos nos separar.</p>
                </div>
                <div>
-                    <img src="images/runeRinori.png" alt="">
                     <p>-Rinorí: Eu vou testar a porta com símbolo da lua a que der certo, entramos todos</p>
+                    <img src="images/runeRinori.png" alt="">
                </div>
                <div>
                     <img src="images/runeHiroki.png" alt="">
@@ -692,37 +695,23 @@ a#prev_page_button:hover{
           var $mybook 		= $('#mybook');
           var $bttn_next		= $('#next_page_button');
           var $bttn_prev		= $('#prev_page_button');
-          var $loading		= $('#loading');
-          var $mybook_images	= $mybook.find('img');
-          var cnt_images		= $mybook_images.length;
-          var loaded			= 0;
            
-          $mybook_images.each(function(){
-               var $img 	= $(this);
-               var source	= $img.attr('src');
-               $('<img/>').load(function(){
-                    ++loaded;
-                    if(loaded == cnt_images){
-                         $loading.hide();
-                         $bttn_next.show();
-                         $bttn_prev.show();
-                         $mybook.show().booklet({
-                              name:               null,                            //  
-                              width:              800,                             //  
-                              height:             500,                             //   
-                              speed:              600,                             //  
-                              direction:          'LTR',                           //  
-                                                         //  
-                              next:               $bttn_next,          			//  
-                              prev:               $bttn_prev,          			//  
-                                                     
-                         });
-                         Cufon.refresh();
-                    }
-               }).attr('src',source);XMLDocument
+          $bttn_next.show();
+          $bttn_prev.show();
+          $mybook.show().booklet({
+               overlays:           false,
+               name:               null,                            //  
+               width:              800,                             //  
+               height:             500,                             //   
+               speed:              600,                             //  
+               direction:          'LTR',                           //  
+                                             //  
+               next:               $bttn_next,          			//  
+               prev:               $bttn_prev,          			//
+                                        
           });
-          
      });
+
 </script>
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     
