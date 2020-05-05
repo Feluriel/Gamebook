@@ -39,7 +39,9 @@ http://www.tooplate.com/view/2085-neuron
                margin: 0;
                padding: 0;
           }
-
+          h1{
+               text-align: center;
+          }
           body {
                background: url('images/textura.jpg');
                color: #444;
@@ -148,7 +150,7 @@ http://www.tooplate.com/view/2085-neuron
           .book_wrapper img {
                margin: 10px 0px 5px 35px;
                width: 300px;
-               padding: 4px;
+               padding: 2px;
           }
 
           a#next_page_button,
@@ -179,6 +181,7 @@ http://www.tooplate.com/view/2085-neuron
           a#prev_page_button:hover {
                background-position: 0px 0px;
           }
+
      </style>
 </head>
 
@@ -202,7 +205,7 @@ http://www.tooplate.com/view/2085-neuron
                <a id="prev_page_button"></a>
 
                <div id="mybook" style="display:none;">
-                    <div class="b-load">
+                    <div class="b-load">                        
                          <div>
                               <br><br>
                               <h1>Capítulo 1</h1>
@@ -448,14 +451,14 @@ http://www.tooplate.com/view/2085-neuron
                               <section class="spacing contact">
                                    <div class="container">
                                         <h2>Responda a pergunta a seguir para prosseguir com a jornada</h2>
-
-                                        <label for="personagens" style="font-size: 15px;">Espectros dançam em minha mente, vou ha lugares onde jamais outros
-                                             ousaram ir, ouço lamentaçôes e felicidades,nunca pense alto, pois
-                                             posso estar ouvindo,afinal quem eu sou?</label>
+                                             <br>
+                                        <label for="personagens" style="font-size: 15px;">Espectros dançam em minha mente, vou há lugares onde jamais outros
+                                             ousaram ir, ouço lamentaçôes e felicidades, não pense alto, pois
+                                             estou a ouvir, afinal quem eu sou?</label>
                                         <br><br><br>
-                                        <select id="personagens">
-                                             <option value="scarlett">Scarlett</option>
+                                        <select id="personagens">      
                                              <option value="hiroki">Hiroki</option>
+                                             <option value="scarlett">Scarlett</option>
                                              <option value="elinthy">Elinthy</option>
                                              <option value="rinori">Rinorí</option>
                                         </select>
@@ -469,7 +472,7 @@ http://www.tooplate.com/view/2085-neuron
                          </div>
                     </div>
                </div>
-               <audio src="music/fairytale.mp3" controls autoplay loop hidden>
+               <audio src="music/fairytale.mp3" controls autoplay loop>
                     <p>Seu navegador não suporta o elemento audio </p>
                </audio>
 
@@ -508,7 +511,7 @@ http://www.tooplate.com/view/2085-neuron
      <script>
           function enviar(){
                var escolha = document.getElementById("personagens").value;
-               if(escolha == "elinthy"){
+               if(escolha == "scarlett"){
                     //document.getElementById("gamebook").src = "cap2.html";
                     window.location = "cap2.html";
                }else{

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <!--
+     Icon Do GameBook
+
+<link rel="shortcut icon" href="favicon.ico">
+
+-->
+
+     <title>The Age of Exiles</title>
+     <!--
+
+Template 2085 Neuron
+
+http://www.tooplate.com/view/2085-neuron
+
+-->
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+
+     <!-- Main css -->
+     <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+     <link rel="stylesheet" href="css/jquery.booklet.1.1.0.css">
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+          }
+
+          body {
+               background: url('images/textura.jpg');
+               color: #444;
+               font-size: 12px;
+               color: #333;
+               font-family: 'Oswald', sans-serif;
+          }
+
+          .booklet {
+               width: 900px;
+               height: 607px;
+               position: relative;
+               margin: 0 auto 10px;
+               box-shadow: 0px 0px 1px #fff;
+
+          }
+
+          .booklet .b-wrap-left {
+               background: #fff url(images/left_bg.jpg) no-repeat top left;
+               -webkit-border-top-left-radius: 10px;
+               -webkit-border-bottom-left-radius: 10px;
+               -moz-border-radius-topleft: 10px;
+               -moz-border-radius-bottomleft: 10px;
+               border-top-left-radius: 10px;
+               border-bottom-left-radius: 10px;
+          }
+
+          .booklet .b-wrap-right {
+               background: #efefef url(images/right_bg.jpg) no-repeat top left;
+               -webkit-border-top-right-radius: 10px;
+               -webkit-border-bottom-right-radius: 10px;
+               -moz-border-radius-topright: 10px;
+               -moz-border-radius-bottomright: 10px;
+               border-top-right-radius: 10px;
+               border-bottom-right-radius: 10px;
+          }
+
+          .booklet .b-counter {
+               bottom: 10px;
+               position: absolute;
+               display: block;
+               width: 90%;
+               height: 20px;
+               border-top: 1px solid #ddd;
+               columns: rgba(34, 34, 34, 0.02);
+               text-align: center;
+               font-size: 12px;
+               padding: 5px 0 0;
+               background: transparent;
+               -moz-box-shadow: 0px -1px 1px #fff;
+               -webkit-box-shadow: 0px -1px 1px #fff;
+               box-shadow: 0px -1px 1px #fff;
+               opacity: 0.8;
+          }
+
+          .book_wrapper {
+               margin: 0 auto;
+               padding-top: 50px;
+               width: 905px;
+               height: 620px;
+               position: relative;
+               background: transparent url(images/bg.png) no-repeat 9px 27px;
+               text-align: justify;
+          }
+
+          .book_wrapper h1 {
+               color: black;
+               margin: 5px 5px 5px 15px;
+               font-size: 24px;
+               font-family: 'Times New Roman', Times, serif;
+               padding-bottom: 7px;
+               text-transform: uppercase;
+               font-weight: 700;
+          }
+
+          .book_wrapper p {
+               font-size: 15px;
+               margin: 5px 5px 5px 15px;
+          }
+
+          .book_wrapper a.article,
+          .book_wrapper a.demo {
+               background: transparent url(images/circle.png) no-repeat 50% 0px;
+               display: block;
+               width: 95px;
+               height: 41px;
+               text-decoration: none;
+               outline: none;
+               font-size: 16px;
+               color: #555;
+               float: left;
+               line-height: 41px;
+               padding-left: 47px;
+          }
+
+          .book_wrapper a.demo {
+               margin-left: 50px;
+          }
+
+          .book_wrapper a.article:hover,
+          .book_wrapper a.demo:hover {
+               background-position: 50% -41px;
+               color: #13386a;
+          }
+
+          .book_wrapper img {
+               margin: 10px 0px 5px 35px;
+               width: 300px;
+               padding: 2px;
+          }
+
+          a#next_page_button,
+          a#prev_page_button {
+               display: none;
+               position: absolute;
+               width: 41px;
+               height: 40px;
+               cursor: pointer;
+               margin-top: -20px;
+               top: 50%;
+               background: transparent url(images/buttons.png) no-repeat 0px -40px;
+          }
+
+          a#prev_page_button {
+               left: -30px;
+          }
+
+          a#next_page_button {
+               right: -30px;
+               background-position: -41px -40px;
+          }
+
+          a#next_page_button:hover {
+               background-position: -41px 0px;
+          }
+
+          a#prev_page_button:hover {
+               background-position: 0px 0px;
+          }
+     </style>
+</head>
+
+<body>
+
+     <!-- PRE LOADER -->
+
+     <div class="preloader">
+          <div class="sk-spinner sk-spinner-wordpress">
+               <span class="sk-inner-circle"></span>
+          </div>
+     </div>
+
+     <!-- Navigation section  -->
+
+
+     <!-- Home Section -->
+     <section>
+          <div class="book_wrapper">
+               <a id="next_page_button"></a>
+               <a id="prev_page_button"></a>
+
+               <div id="mybook" style="display:none;">
+                    <div class="b-load">
+                         <div>
+                              <p>Reino de Darcton: É um reino totalitário onde quanto mais força você tiver e conseguir
+                                   prová-la, maior será sua importância no reino. O rei Theodore II sempre governa com
+                                   mão de ferro desde o inicio de sua dinastia, as pessoas sempre aclama e falam muito
+                                   bem de seu governo prospero e rico. Dos três reinos é o que tem o maior exercito
+                                   porem o que tem menos conhecimento em magia. Apesar de apresentar poucos magos, os
+                                   que vivem em Darcton tem o controle exclusivamente da magia elementar primária da
+                                   agua como seus devidos compostos de evolução, gelo. Por fim Darcton é reconhecido
+                                   pelo seu clima frio (fica ao norte), sua riqueza natural e por sua excelente bebida.
+                              </p>
+                         </div>
+                         <div>
+                              <p>Reino de Asvilak É um reino que apresenta uma monarquia com republica apesar de existir
+                                   um rei com poder absoluto, alguns direitos e reconhecimento do povo na politica
+                                   existem nesse reino. O que decide o valor do individuo em Asvilak é sua riqueza. A
+                                   rainha De La Morgause V, sempre elogiada pela sua beleza exuberante, mesmo com todo o
+                                   preconceito por ser mulher, governa tão bem atendendo a interesse da elite quanto os
+                                   do povo. Sendo um dos três reinos Asvilak é o que mais possui Terras Apresenta um
+                                   numero relativo de magos, sendo um reino que está de portas abertas para aprender
+                                   técnicas de uso da magia, seus magos por sua vez tem total domino e controle
+                                   exclusivamente do elementar fogo. Avislak é caracteriza por seu clima mais ameno
+                                   (fica ao oriente sul na fronteira), seu comercio, pela beleza de suas mulheres e por
+                                   ter grandes rios navegáveis.</p>
+                         </div>
+                         <div> <img src="images/magnusCard.jpg" alt="Magnus"></div>
+                         <div>
+                              <p>
+                                   Reino Fall de Larvand (Reino Do Magnus) Um reino bastante pacífico em relação aos
+                                   outros, nele as pessoas eram reconhecidas pelo seu esforço, geralmente os mais
+                                   importantes são os magos. O rei Zoelse I, mesmo sendo jovem passava por muitas
+                                   dificuldades em seu governo, Zoelse I precisava de conselheiros para conseguir
+                                   administrar seu reino, era bem querido e reconhecido por seu povo chamado de: “benção
+                                   dos céus”. O último dos três reinos, sendo o que mais possui conhecimento mágico,
+                                   porém tem o menor exército. O reino Fall de Larvand era reconhecido por sua grande
+                                   biblioteca que abrigava os conhecimentos de todo o mundo, seu clima era frio em
+                                   várias épocas do ano , sua bela paisagem serviu de inspiração para grandes poetas
+                                   daquela época. Os magos de Fall de Larvand possuíam domínio do elementar do raio e
+                                   vento, com exceção de Magnus Nightshade, que aos 8 anos dominava o raio e o vento,
+                                   aos 12 estava sobre domínio da necromancia, com vários feitos para seu reino que em
+                                   pouco tempo obteve um reconhecimento que não queria para si. </p>
+                         </div>
+                         <div>
+                                   <p>
+                                        Quando chegou aos 16 anos, já tinha mais de 150 missões e em uma delas,
+                                        encontrou uma
+                                        criatura que hoje virou seu seguidor, um lobo especial que possuía uma parte de
+                                        magia
+                                        necromante. Nesse período Magnus viu seus pais e familiares morrerem nas
+                                        guerras, seu
+                                        reino entrar em colapso por causa da má administração de seu rei, sabendo disso,
+                                        Magnus tentou um golpe contra o trono, o rei teve piedade e não o matou, mas o
+                                        exilou
+                                        impedindo-o de entrar para sempre. Magnus após ser banido de seu lar, mesmo
+                                        sendo o
+                                        maior e mais experimente mago de lá, não tiveram perdão em exilá-lo, viajou por
+                                        todos
+                                        os reinos, sem exceção alguma, e com um ódio crescendo cada vez mais em seu
+                                        peito,
+                                        pois coração? Não havia mais, alma? Também não tinha, sendo ambos trocados por
+                                        poder.
+                                        Aos 24 anos Magnus, dominava todos os elementares e seus sub compostos a magia
+                                        necromante, e conseguia usar a magia planar. Percebendo que estava em posse de
+                                        muito
+                                        perder e que já não tinha mais o que temer e a perder, voltou para seu reino,
+                                        onde
+                                        travou uma guerra na fronteira com o rei, que Magnus só tinha desprezo pelo
+                                        mesmo.
+                                   </p>
+                              </div>
+                              <div>
+                                   <p>Não era de se esperar que o prodígio do reino perdesse, tal como aconteceu, Magnus
+                                        matou Zoelse I, e seu exército que havia ali. Magnus virou rei por posse do
+                                        reino de
+                                        Fall de Larvand. Após seis anos o reino de Fall de Larvand, foi o que mais
+                                        cresceu
+                                        tanto em estrutura e exército, quanto em conhecimento mágico, mas, nem se
+                                        compara, a
+                                        criatura que Magnus tinha como servo e amigo, o mesmo obtinha todo o
+                                        conhecimento
+                                        possível. Magnus entediado dia após dia, pois seu reino já tinha tudo o que
+                                        precisava
+                                        e ele se auto declarava como o ser mais forte existente, não contente abdicou o
+                                        trono
+                                        de Fall de Larvand, para um grupo de magos conselheiros, e se retirou do reino
+                                        com
+                                        sua criatura em busca de dominar mais reinos, e mais bem mais poder.
+                                   </p>
+                              
+                                   <div class="container">
+                                        <button onclick="enviar()">Voltar</button>
+                                   </div>
+                         </div>
+                    </div>
+                    <audio src="music/fairytale.mp3" controls autoplay loop>
+                         <p>Seu navegador não suporta o elemento audio </p>
+                    </audio>
+
+     </section>
+
+
+     <!-- SCRIPTS -->
+
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.parallax.js"></script>
+     <script src="js/custom.js"></script>
+     <script type="text/javascript">
+          $(function () {
+               var $mybook = $('#mybook');
+               var $bttn_next = $('#next_page_button');
+               var $bttn_prev = $('#prev_page_button');
+
+               $bttn_next.show();
+               $bttn_prev.show();
+               $mybook.show().booklet({
+                    overlays: false,
+                    name: null,                            //  
+                    width: 800,                             //  
+                    height: 500,                             //   
+                    speed: 600,                             //  
+                    direction: 'LTR',                           //  
+                    //  
+                    next: $bttn_next,          			//  
+                    prev: $bttn_prev,          			//
+
+               });
+
+          });
+
+     </script>
+     <script>
+          function enviar() {
+               var $mybook = $('#mybook');
+               window.location = "cap2.html";
+          }
+     </script>
+     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+
+
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+     <script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+     <script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+
+     <link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+</body>
+
+</html>
