@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <script src="https://sites.google.com/site/novoefeitoneve/home/novoefeitoneve/snowstorm.js"></script>
+     <!--
+     Icon Do GameBook
+
+<link rel="shortcut icon" href="favicon.ico">
+
+-->
+
+     <title>The Age of Exiles</title>
+     <!--
+
+Template 2085 Neuron
+
+http://www.tooplate.com/view/2085-neuron
+
+-->
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+
+     <!-- Main css -->
+     <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+     <link rel="stylesheet" href="css/jquery.booklet.1.1.0.css">
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+          }
+
+          body {
+               background: url('images/textura.jpg');
+               color: #444;
+               font-size: 12px;
+               color: #333;
+               font-family: 'Oswald', sans-serif;
+          }
+
+          .booklet {
+               width: 900px;
+               height: 607px;
+               position: relative;
+               margin: 0 auto 10px;
+               box-shadow: 0px 0px 1px #fff;
+
+          }
+
+          .booklet .b-wrap-left {
+               background: #fff url(images/left_bg.jpg) no-repeat top left;
+               -webkit-border-top-left-radius: 10px;
+               -webkit-border-bottom-left-radius: 10px;
+               -moz-border-radius-topleft: 10px;
+               -moz-border-radius-bottomleft: 10px;
+               border-top-left-radius: 10px;
+               border-bottom-left-radius: 10px;
+          }
+
+          .booklet .b-wrap-right {
+               background: #efefef url(images/right_bg.jpg) no-repeat top left;
+               -webkit-border-top-right-radius: 10px;
+               -webkit-border-bottom-right-radius: 10px;
+               -moz-border-radius-topright: 10px;
+               -moz-border-radius-bottomright: 10px;
+               border-top-right-radius: 10px;
+               border-bottom-right-radius: 10px;
+          }
+
+          .booklet .b-counter {
+               bottom: 10px;
+               position: absolute;
+               display: block;
+               width: 90%;
+               height: 20px;
+               border-top: 1px solid #ddd;
+               columns: rgba(34, 34, 34, 0.02);
+               text-align: center;
+               font-size: 12px;
+               padding: 5px 0 0;
+               background: transparent;
+               -moz-box-shadow: 0px -1px 1px #fff;
+               -webkit-box-shadow: 0px -1px 1px #fff;
+               box-shadow: 0px -1px 1px #fff;
+               opacity: 0.8;
+          }
+
+          .book_wrapper {
+               margin: 0 auto;
+               padding-top: 50px;
+               width: 905px;
+               height: 620px;
+               position: relative;
+               background: transparent url(images/bg.png) no-repeat 9px 27px;
+               text-align: justify;
+          }
+
+          .book_wrapper h1 {
+               color: black;
+               margin: 5px 5px 5px 15px;
+               font-size: 24px;
+               font-family: 'Times New Roman', Times, serif;
+               padding-bottom: 7px;
+               text-transform: uppercase;
+               font-weight: 700;
+          }
+
+          .book_wrapper p {
+               font-size: 15px;
+               margin: 5px 5px 5px 15px;
+          }
+
+          .book_wrapper a.article,
+          .book_wrapper a.demo {
+               background: transparent url(images/circle.png) no-repeat 50% 0px;
+               display: block;
+               width: 95px;
+               height: 41px;
+               text-decoration: none;
+               outline: none;
+               font-size: 16px;
+               color: #555;
+               float: left;
+               line-height: 41px;
+               padding-left: 47px;
+          }
+
+          .book_wrapper a.demo {
+               margin-left: 50px;
+          }
+
+          .book_wrapper a.article:hover,
+          .book_wrapper a.demo:hover {
+               background-position: 50% -41px;
+               color: #13386a;
+          }
+
+          .book_wrapper img {
+               margin: 10px 0px 5px 35px;
+               width: 300px;
+               padding: 2px;
+          }
+
+          a#next_page_button,
+          a#prev_page_button {
+               display: none;
+               position: absolute;
+               width: 41px;
+               height: 40px;
+               cursor: pointer;
+               margin-top: -20px;
+               top: 50%;
+               background: transparent url(images/buttons.png) no-repeat 0px -40px;
+          }
+
+          a#prev_page_button {
+               left: -30px;
+          }
+
+          a#next_page_button {
+               right: -30px;
+               background-position: -41px -40px;
+          }
+
+          a#next_page_button:hover {
+               background-position: -41px 0px;
+          }
+
+          a#prev_page_button:hover {
+               background-position: 0px 0px;
+          }
+     </style>
+</head>
+
+<body>
+
+     <!-- PRE LOADER -->
+
+     <div class="preloader">
+          <div class="sk-spinner sk-spinner-wordpress">
+               <span class="sk-inner-circle"></span>
+          </div>
+     </div>
+
+     <!-- Navigation section  -->
+
+
+     <!-- Home Section -->
+     <section>
+          <div class="book_wrapper">
+               <a id="next_page_button"></a>
+               <a id="prev_page_button"></a>
+
+               <div id="mybook" style="display:none;">
+                    <div class="b-load">
+                         <div>
+                             <h1>
+                                Hiroki
+                             </h1>
+                             <br>
+                              <p>
+                                “Dentro de sua mente ele sentia uma raiva crescendo por não saber o que fazer para
+                                ajudar seus companheiros tão pouco a si mesmo,
+                                via Scarlett desmaiada naquela cama pequena e sentiu vontade de beijá-la, mas o que
+                                os outros diriam,
+                                parou para analisar um momento o que estava acontecendo em sua volta, olhou para
+                                Elinthy os círculos dos olhos dela estavam bem fundos ela passava noites acordadas
+                                patrulhando,
+                                para ver se encontrava alguma ameaça, quando eles saíssem dali ele teria que
+                                agradecê-la por manter todos a salvo.
+                              </p>
+                              <br>
+                              <p>
+                                Rinorí seu amigo de muito tempo, olhava para Elinthy e para janela lá fora preocupado
+                                com o retorno de sua beast,
+                                parecia estar exausto e preocupado com sua magia drenada,
+                                e que levaria o esforço de cada um de seus companheiros, fazendo de tudo para
+                                ajudá-los.”</p>
+                                
+                         </div>  
+                         <div>
+                             <h1>
+                                 Rinorí
+                             </h1>
+                            <br>
+                            <p>“Rinorí nao aguentava mais, aquilo que a falsa Elinthy disse o afetará mais que o
+                                 necessário,
+                                 mais ele sabia que aquelas palavras não eram reais e que Elinthy não fazia ideia de
+                                 que aquilo havia ocorrido,
+                                 ele olhava pro seu rosto e via uma mulher exausta, mas mesmo assim muito linda ele
+                                 faria de tudo para lutar por ela,
+                                 o outro lado da sala seu amigo.</p>
+                            <br>
+                            <p>Hiroki estava bem abatido,
+                                 mas duvidava que ele cairia em cima de Scarlett a qualquer momento,
+                                 mais o conhecendo bem ele seguraria a onda, sua coruja ainda não havia voltado,
+                                 começava a se preocupar com que estava prestes a vir, apesar de tudo daria sua vida
+                                 aos seus companheiros,
+                                 pois depois de uma longa jornada estava aprendendo a criara afeto com aquelas três
+                                 pessoas que se conheceram por um infeliz acaso.”</p>
+                         </div>
+                         <div>
+                             <h1>
+                                 Elinthy
+                            </h1>
+                            <br>
+                            <p>“Cansada essa era a melhor palavra que definia Elinthy, estava completamente exausta,
+                                 horas acordada de madrugada vigiando se algo os atacaria a noite,
+                                 por ser mais velha sabia que carregava um peso a mais, que ela se
+                                 achasse mais que os outros pois de um tempo pra cá não conseguia se sentir bem de
+                                 forma alguma,
+                                 andava mais estressada que o habitual, mas depois de tanto sofrimento que passou em
+                                 sua vida ali estava três vidas com as quais ela aprendera a lidar,
+                                 Rinorí havia ficado muito assustado após a Ruína,
+                                 mas ele não quis comentar sobre o assunto sabia que ele estava com raiva,
+                                 e sabia que havia algo a mais em relação aos sentimentos dele.</p>
+                            <br>
+                            <p>
+                                 Hiroki fingia estar despreocupado mas ela sabia que não,
+                                 pois ele gostava de usar uma máscara de durão, e Scarlett ainda continuava desmaiada
+                                 para piorar a situação,
+                                 todos estavam horríveis mais o pior ainda estaria por vir.
+                            </p>
+                         </div>
+                         <div>
+                            <p>
+                                A beast de Rinorí voltou, muito assustada e sem uma perna,
+                                ele bateu seu cajado nela e ela se dissipou,
+                                ao mesmo tempo Scarllet urrou de dor na cama se contorcendo mas mesmo assim, ainda
+                                desacordada.”
+
+                                <button style="float: right; " onclick="enviar()">Voltar</button> 
+                            </p>
+                         </div>
+                    </div>
+                    <audio src="music/fairytale.mp3" controls autoplay loop>
+                         <p>Seu navegador não suporta o elemento audio </p>
+                    </audio>
+                 </div>        
+     </section>
+
+
+     <!-- SCRIPTS -->
+
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.parallax.js"></script>
+     <script src="js/custom.js"></script>
+     <script type="text/javascript">
+          $(function () {
+               var $mybook = $('#mybook');
+               var $bttn_next = $('#next_page_button');
+               var $bttn_prev = $('#prev_page_button');
+
+               $bttn_next.show();
+               $bttn_prev.show();
+               $mybook.show().booklet({
+                    overlays: false,
+                    name: null,                            //  
+                    width: 800,                             //  
+                    height: 500,                             //   
+                    speed: 600,                             //  
+                    direction: 'LTR',                           //  
+                    //  
+                    next: $bttn_next,          			//  
+                    prev: $bttn_prev,          			//
+
+               });
+
+          });
+
+     </script>
+     <script>
+          function enviar() {
+               var $mybook = $('#mybook');
+               window.location = "cap2.html";
+          }
+     </script>
+     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+
+
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+     <script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+     <script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+
+     <link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+</body>
+
+</html>
