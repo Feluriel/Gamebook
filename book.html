@@ -26,7 +26,6 @@ http://www.tooplate.com/view/2085-neuron
 
 -->
      <link rel="stylesheet" href="css/font-awesome.min.css">
-
      <!-- Main css -->
      <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
      <link rel="stylesheet" href="css/jquery.booklet.1.1.0.css">
@@ -38,6 +37,8 @@ http://www.tooplate.com/view/2085-neuron
           * {
                margin: 0;
                padding: 0;
+               list-style: none;
+               text-decoration: none;
           }
 
           body {
@@ -47,15 +48,18 @@ http://www.tooplate.com/view/2085-neuron
                color: #333;
                font-family: 'Oswald', sans-serif;
           }
+
           .booklet {
                width: 900px;
                height: 607px;
                position: relative;
                margin: 0 auto 10px;
           }
+
           .booklet .b-wrap-right {
                background: #efefef url(images/right_bg.jpg) no-repeat top right;
           }
+
           .booklet .b-counter {
                bottom: 10px;
                position: absolute;
@@ -73,15 +77,16 @@ http://www.tooplate.com/view/2085-neuron
                box-shadow: 0px -1px 1px #fff;
                opacity: 0.8;
           }
+
           .book_wrapper {
                margin: 0 auto;
                padding-top: 50px;
                width: 905px;
-               height: 620px;
                position: relative;
                text-align: justify;
                background: transparent url(images/bg-closed.png) no-repeat 9px 27px;
           }
+
           .book_wrapper h1 {
                color: black;
                margin: 5px 5px 5px 15px;
@@ -95,12 +100,65 @@ http://www.tooplate.com/view/2085-neuron
           .book_wrapper p {
                font-size: 15px;
           }
+
           .book_wrapper img {
                margin: 10px 0px 5px 35px;
                width: 300px;
                padding: 4px;
           }
 
+          .active {
+               background-color: black ;
+               color: white;
+          }
+
+          .dropbtn {
+               background-color: white;
+               color: black;
+               padding: 13px;
+               font-size: 13px;
+               border: none;
+          }
+
+          /* The container <div> - needed to position the dropdown content */
+          .dropdown {
+               position: relative;
+               display: inline-block;
+          }
+
+          /* Dropdown Content (Hidden by Default) */
+          .dropdown-content {
+               display: none;
+               position: absolute;
+               background-color: #f9f9f9;
+               min-width: 160px;
+               box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+               z-index: 1;
+          }
+
+          /* Links inside the dropdown */
+          .dropdown-content a {
+               color: black;
+               padding: 12px 16px;
+               text-decoration: none;
+               display: block;
+          }
+
+          /* Change color of dropdown links on hover */
+          .dropdown-content a:hover {
+               background-color: #f1f1f1
+          }
+
+          /* Show the dropdown menu on hover */
+          .dropdown:hover .dropdown-content {
+               display: block;
+          }
+
+          /* Change the background color of the dropdown button when the dropdown content is shown */
+          .dropdown:hover .dropbtn {
+               background-color: black;
+               color: white;
+          }
      </style>
 </head>
 
@@ -119,24 +177,33 @@ http://www.tooplate.com/view/2085-neuron
 
      <!-- Home Section -->
      <section>
+          <div class="dropdown">
+               <button class="dropbtn">Capítulos</button>
+               <div class="dropdown-content">
+                 <a onclick="menu('cap1.html')">Capítulo 1</a>
+                 <a onclick="menu('cap2.html')">Capítulo 2</a>
+                 <a onclick="menu('cap3.html')">Capítulo 3</a>
+               </div>
+             </div>
           <div class="book_wrapper">
+
                <a id="next_page_button"></a>
                <a id="prev_page_button"></a>
 
-               <div id="mybook" onclick="enviar()"  >
-                         <div class="b-load">
-                              <div class="container">
-                                   <br><br><br><br>
-                                   <h1>The Age of Exiles</h1>
-                                   <h2>Capa em construção</h2>
-                                   <p>Clique para começar</p>
-                              </div>
+               <div id="mybook" onclick="enviar()">
+                    <div class="b-load">
+                         <div class="container">
+                              <br><br><br><br>
+                              <h1>The Age of Exiles</h1>
+                              <h2>Capa em construção</h2>
+                              <p>Clique para começar</p>
                          </div>
-
+                    </div>
                </div>
-               <audio src="music/fairytale.mp3" controls autoplay loop hidden>
-                    <p>Seu navegador não suporta o elemento audio </p>
-               </audio>
+          </div>
+          <audio src="music/fairytale.mp3" controls autoplay loop>
+               <p>Seu navegador não suporta o elemento audio </p>
+          </audio>
 
      </section>
 
@@ -147,7 +214,7 @@ http://www.tooplate.com/view/2085-neuron
      <script src="js/bootstrap.min.js"></script>
      <script src="js/jquery.parallax.js"></script>
      <script src="js/custom.js"></script>
-     
+
      <script type="text/javascript">
           $(function () {
                var $mybook = $('#mybook');
@@ -156,19 +223,22 @@ http://www.tooplate.com/view/2085-neuron
                $mybook.booklet({
                     overlays: false,
                     closed: true,
-                    width:  800,
+                    width: 800,
                     height: 500,
                });
-               
+
           });
      </script>
      <script>
-          function enviar(){
+          function enviar() {
                window.location = "cap1.html";
+          }
+          function menu(capitulo) {
+               window.location = capitulo;
           }
      </script>
 
-     
+
      <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 

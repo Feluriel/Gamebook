@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <script src="https://sites.google.com/site/novoefeitoneve/home/novoefeitoneve/snowstorm.js"></script>
+     <!--
+     Icon Do GameBook
+
+<link rel="shortcut icon" href="favicon.ico">
+
+-->
+
+     <title>The Age of Exiles</title>
+     <!--
+
+Template 2085 Neuron
+
+http://www.tooplate.com/view/2085-neuron
+
+-->
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+
+     <!-- Main css -->
+     <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+     <link rel="stylesheet" href="css/jquery.booklet.1.1.0.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+          }
+
+          h1 {
+               text-align: center;
+          }
+
+          body {
+               background: url('images/textura.jpg');
+               color: #444;
+               font-size: 12px;
+               color: #333;
+               font-family: 'Oswald', sans-serif;
+          }
+
+          .booklet {
+               width: 900px;
+               height: 607px;
+               position: relative;
+               margin: 0 auto 10px;
+               box-shadow: 0px 0px 1px #fff;
+
+          }
+
+          .booklet .b-wrap-left {
+               background: #fff url(images/left_bg.jpg) no-repeat top left;
+               -webkit-border-top-left-radius: 10px;
+               -webkit-border-bottom-left-radius: 10px;
+               -moz-border-radius-topleft: 10px;
+               -moz-border-radius-bottomleft: 10px;
+               border-top-left-radius: 10px;
+               border-bottom-left-radius: 10px;
+          }
+
+          .booklet .b-wrap-right {
+               background: #efefef url(images/right_bg.jpg) no-repeat top left;
+               -webkit-border-top-right-radius: 10px;
+               -webkit-border-bottom-right-radius: 10px;
+               -moz-border-radius-topright: 10px;
+               -moz-border-radius-bottomright: 10px;
+               border-top-right-radius: 10px;
+               border-bottom-right-radius: 10px;
+          }
+
+          .booklet .b-counter {
+               bottom: 10px;
+               position: absolute;
+               display: block;
+               width: 90%;
+               height: 20px;
+               border-top: 1px solid #ddd;
+               columns: rgba(34, 34, 34, 0.02);
+               text-align: center;
+               font-size: 12px;
+               padding: 5px 0 0;
+               background: transparent;
+               -moz-box-shadow: 0px -1px 1px #fff;
+               -webkit-box-shadow: 0px -1px 1px #fff;
+               box-shadow: 0px -1px 1px #fff;
+               opacity: 0.8;
+          }
+
+          .book_wrapper {
+               margin: 0 auto;
+               padding-top: 50px;
+               width: 905px;
+               position: relative;
+               background: transparent url(images/bg.png) no-repeat 9px 27px;
+               text-align: justify;
+          }
+
+          .book_wrapper h1 {
+               color: black;
+               margin: 5px 5px 5px 15px;
+               font-size: 24px;
+               font-family: 'Times New Roman', Times, serif;
+               padding-bottom: 7px;
+               text-transform: uppercase;
+               font-weight: 700;
+          }
+
+          .book_wrapper p {
+               font-size: 15px;
+               margin: 5px 5px 5px 15px;
+          }
+
+          .book_wrapper a.article,
+          .book_wrapper a.demo {
+               background: transparent url(images/circle.png) no-repeat 50% 0px;
+               display: block;
+               width: 95px;
+               height: 41px;
+               text-decoration: none;
+               outline: none;
+               font-size: 16px;
+               color: #555;
+               float: left;
+               line-height: 41px;
+               padding-left: 47px;
+          }
+
+          .book_wrapper a.demo {
+               margin-left: 50px;
+          }
+
+          .book_wrapper a.article:hover,
+          .book_wrapper a.demo:hover {
+               background-position: 50% -41px;
+               color: #13386a;
+          }
+
+          .book_wrapper img {
+               margin: 10px 0px 5px 35px;
+               width: 300px;
+               padding: 2px;
+          }
+
+          a#next_page_button,
+          a#prev_page_button {
+               display: none;
+               position: absolute;
+               width: 41px;
+               height: 40px;
+               cursor: pointer;
+               margin-top: -20px;
+               top: 50%;
+               background: transparent url(images/buttons.png) no-repeat 0px -40px;
+          }
+
+          a#prev_page_button {
+               left: -30px;
+          }
+
+          a#next_page_button {
+               right: -30px;
+               background-position: -41px -40px;
+          }
+
+          a#next_page_button:hover {
+               background-position: -41px 0px;
+          }
+
+          a#prev_page_button:hover {
+               background-position: 0px 0px;
+          }
+
+          .activo {
+               background-color: black;
+               color: white !important;
+          }
+
+          .activo:hover {
+               background-color: white;
+               color: black
+          }
+
+          .dropbtn {
+               background-color: white;
+               color: black;
+               padding: 13px;
+               font-size: 13px;
+               border: none;
+          }
+
+          /* The container <div> - needed to position the dropdown content */
+          .dropdown {
+               position: relative;
+               display: inline-block;
+          }
+
+          /* Dropdown Content (Hidden by Default) */
+          .dropdown-content {
+               display: none;
+               position: absolute;
+               background-color: #f9f9f9;
+               min-width: 160px;
+               box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+               z-index: 1;
+          }
+
+          /* Links inside the dropdown */
+          .dropdown-content a {
+               color: black;
+               padding: 12px 16px;
+               text-decoration: none;
+               display: block;
+          }
+
+          /* Change color of dropdown links on hover */
+          .dropdown-content a:hover {
+               background-color: #f1f1f1;
+               color: black;
+          }
+
+          /* Show the dropdown menu on hover */
+          .dropdown:hover .dropdown-content {
+               display: block;
+          }
+
+          /* Change the background color of the dropdown button when the dropdown content is shown */
+          .dropdown:hover .dropbtn {
+               background-color: black;
+               color: white;
+          }
+     </style>
+</head>
+
+<body>
+
+     <!-- PRE LOADER -->
+
+     <div class="preloader">
+          <div class="sk-spinner sk-spinner-wordpress">
+               <span class="sk-inner-circle"></span>
+          </div>
+     </div>
+
+     <!-- Navigation section  -->
+
+
+     <!-- Home Section -->
+     <section>
+          <div class="book_wrapper">
+               <a id="next_page_button"></a>
+               <a id="prev_page_button"></a>
+
+               <div id="mybook" style="display:none;">
+                    <div class="b-load">
+                         <div>
+                              <h2>
+                                   <center>
+                                        Encontro com Magnus
+                                   </center>
+                              </h2>
+                              <p>
+                                   Chegaram na porta daquele castelo abandonado,
+                                   o vento estava forte e o castelo se contorcia,
+                                   a porta se abriu para eles revelando sentado em um trono Magnus
+                                   com um sorriso malicioso em seu rosto.
+                              </p>
+                              <br>
+                              <p>
+                                   -Magnus: Ora vejam só, minha amiga Scarlett trouxe seus companheiros para mim,
+                                   Elinthy você se tornou uma mulher mais bonita do que eu esperava, humm...
+                              </p>
+                              <br>
+                              <p>
+                                   Rinorí se pois de frente de Elinthy,
+                                   como um ato de que ele estaria com ela e faria o momento valer a pena.
+                              </p>
+                              <br>
+                              <p>
+                                   -Magnus: Hahahaha, muito bem Rinorí não é mesmo, bom conhecer você,
+                                   sabe que um dia eu sonhei que você era meu filho realmente seria um prodígio,
+                                   e Aqui temos Hiroki o mago mais poderoso é encantador ver todos vocês reunidos diante
+                                   de
+                                   mim,
+                                   então minha querida Scarlett pensou em minha oferta?
+                              </p>
+
+                         </div>
+                         <div>
+                              <p>
+                                   -Hiroki: Ela não é sua querida e nunca será nem por cima de meu cadáver!
+                              </p>
+                              <p>
+                                   -Scarlett: Nunca nos aliariamos a você Magnus e não viemos virar seus escravos.
+                              </p>
+                              <p>
+                                   -Elinthy: Eu vou fazer o seu coração podre sangrar e você vai gritar de dor quando
+                                   minha
+                                   espada perfurá-lo.
+                              </p>
+                              <p>
+                                   -Rinorí: É melhor se levantar Magnus, se não quiser morrer sentado como um fraco,
+                                   e quanto a Elinthy o único que irá tocar em cada centímetro do corpo dela sou eu.
+                              </p>
+                              <br>
+                              <p>
+                                   Magnus se levanta do trono e
+                                   começa a caminhar em direção a eles seu lobo aparece
+                                   logo atrás trajado com uma armadura brilhante.
+                              </p>
+                              <br>
+                              <p>
+                                   -Magnus: Já vi que não querem aceitar minha oferta. Oh gostam?
+                                   esse é meu, fiel escudeiro um lobo guerreiro que eu encontrei, e o nomiei de (Naoki)
+                                   uma criatura sábia e magnífica se não querem juntar-se a mim então vão ter que
+                                   enfrentar
+                                   nossa ira.
+                              </p>
+                         </div>
+                         <div>
+                              <img src="images/lobo.jpg" height="220px" title="Naoki" alt="Naoki">
+                              <p>
+                                   O lobo avançou para Hiroki e Rinorí com apenas um salto suas presas enormes e um
+                                   olhar
+                                   perturbador,
+                                   quando olharam para o lobo juraram que ele poderia estar sorrindo.
+                              </p>
+                              <p>
+                                   Nesse momento Rinorí começou a tremer pois sabia que nenhuma de suas invocações teria
+                                   o
+                                   mínimo de chance contra o lobo ou o próprio Magnus então ele lembrou dos ensinamentos
+                                   de sua mãe e da invocação proibida. Amateron , o dragão das chamas negras,
+                                   a provável invocação mais forte de todo conhecimento do mágico,
+                                   então Rinorí não teve escolha levantou sua mão direita e bateu
+                              </p>
+
+                         </div>
+                         <div>
+                              <p>
+                                   no chão invocando a mais
+                                   temida besta já invocada. Hiroki ficou admirado pois nunca viu algo tão grandioso em
+                                   toda
+                                   sua vida.
+                              </p>
+                              <br>
+                              <p>
+                                   <strong>
+                                        -Amateron: QUEM OUSA ME TRAZER AO MUNDO DOS HUMANOS!?
+                                   </strong>
+                              </p>
+                              <br>
+                              <p>
+                                   -Rinorí: Eu Rinorí Mendell por favor ó grande Amateron me ajude nessa batalha.
+                              </p>
+                              <br>
+                              <p>
+                                   <strong>
+                                        -Amateron: PORQUE EU DEVERIA AJUDAR VOCÊS HUMANOS, NÃO PASSAM DE MERAS…
+                                   </strong>
+                                   Espere aquele ali é o Magnus?
+                              </p>
+                              <br>
+                              <p>
+                                   -Rinorí: Sim estamos enfrentando ele.
+                              </p>
+                              <p>
+                                   -Amateron: Rinorí não é? Certo irei ajudá-lo nessa batalha pois tenho um caso
+                                   pendente com
+                                   Magnus
+                              </p>
+                              <p>
+                                   -Hiroki: Vão ficar aí conversando ou vão lutar? Está difícil aqui.
+                              </p>
+                              <br>
+                              <p>
+                                   Nesse momento Rinorí subiu em cima do Amateron e guiou ele até o lobo para que
+                                   pudesse
+                                   salvar Hiroki.
+                              </p>
+                         </div>
+                         <div>
+                              <img src="images/amateron.jpg" height="430px" title="Amateron" alt="Amateron">
+                         </div>
+                         <div>
+                              <p>
+                                   -Hiroki: Vão ficar aí conversando ou vão lutar? Está difícil aqui.
+                              </p>
+                              <br>
+                              <p>
+                                   Nesse momento Rinorí subiu em cima do Amateron e guiou ele até o lobo para que
+                                   pudesse
+                                   salvar Hiroki.
+                              </p>
+                              <br>
+                              <p>
+                                   -Rinorí: Durante esse intervalo o que descobriu?
+                              </p>
+                              <p>
+                                   -Hiroki: É um necromante tudo que toca morre
+                              </p>
+                              <p>
+                                   -Rinorí: Então ataque físicos não são uma boa ideia
+                              </p>
+                              <p>
+                                   -Hiroki: Rinorí tem uma coisa que eu estava querendo te mostrar há um tempo.
+                              </p>
+                              <br>
+                              <p>
+                                   Então Hiroki pulou do dragão e criou um pássaro com sua magia e montou em cima dele
+                              </p>
+                              <p>
+                                   -Rinorí: Minha nossa ? não me diga que es um invocador também.
+                              </p>
+                              <br>
+                              <p>
+                                   -Hiroki: não isso é gelo, gelo maciço, mas eu posso modelá-lo e criar o que eu
+                                   quiser, como
+                                   esse pássaro
+                              </p>
+                         </div>
+                         <div>
+                              <img src="images/avedegelo.jpg" height="430px" title="Fênix De Gelo" alt="AveDeGelo">
+                         </div>
+                         <div>
+                              <p>
+                                   -Rinorí: Isso não é um pássaro é uma Fênix meu amigo.
+                              </p>
+                              <p>
+                                   -Hiroki: melhor assim mesmo.
+                              </p>
+                              <br>
+                              <p>
+                                   Então os dois partiram para cima do lobo,
+                                   Rinorí e Amateron tentaram queimar o lobo enquanto a Fênix de Hiroki atiravam
+                                   espinhos
+                                   de gelo com suas asas contra o lobo.
+                                   Era inútil, quanto mais o atacavam parecia estar ficando mais forte.
+                              </p>
+                              <br>
+                              <p>
+                                   -Amateron: é inútil Rinorí se continuarmos atacando desse
+                                   jeito você ficará sem magia e não vai ter forças para me manter nesse mundo, vamos
+                                   recuar.
+                              </p>
+                              <p>
+                                   -Rinorí: Não podemos eu prometi pra Elinthy que
+                                   eu voltaria só quando eu derrotasse essa besta. Eu não vou recuar!
+                              </p>
+                              <p>
+                                   -Amateron: vocês humanos são mesmo criaturas interessantes, mesmo sem chances de
+                                   vitória
+                                   continuam lutando
+                              </p>
+                              <p>
+                                   -Hiroki: não mesmo, enquanto eu puder me mover eu vou lutar não importa o que
+                                   aconteça.
+                              </p>
+                              <p>
+                                   Motivados os dois tentaram dar um poderoso ataque em conjunto
+                              </p>
+                         </div>
+                         <div>
+                              <p>
+                                   -Hiroki: Rinorí incendeie essa Fênix
+                              </p>
+                              <p>
+                                   -Rinorí: o que? Você tá maluco?
+                              </p>
+                              <p>
+                                   -Hiroki: Você e o Amateron fiquem atrás de mim vou precisar de vocês para sair dessa
+                                   com
+                                   vida.
+                              </p>
+                              <p>
+                                   -Rinorí: Tudo mas tenha muito cuidado.
+                              </p>
+                              <br>
+                              <p>
+                                   Então Rinori ordenou que Amateron cuspisse fogo contra a Fênix de
+                                   Hiroki, Hiroki junto com a sua Fênix em chamas se jogou com tudo pra cima do lobo de
+                                   Magnus
+                                   e pulou segundos
+                                   antes de sua Fênix se chocar contra o lobo então assim Amateron conseguiu pegar
+                                   Hiroki em
+                                   suas costas.
+                              </p>
+                              <br>
+                              <p>
+                                   -Rinorí: Deu um medo aqui Hiroki mas ainda assim foi incrível,
+                                   que pena que aquela obra de arte foi junto com o lobo.
+                              </p>
+                              <p>
+                                   -Hiroki: Mas a arte é isso Rinorí, a arte…
+                                   <strong>
+                                        É UMA EXPLOSÃO.
+                                   </strong>
+                              </p>
+                              <br>
+                              <p>
+                                   Nesse momento a Fênix de Hiroki explodiu em cima do lobo, só para garantir que ele
+                                   realmente
+                                   estava morto.
+                              </p>
+                         </div>
+                         <div>
+                              <p>
+                                   -Rinorí: Isso foi incrível, agora vamos atrás das duas para ajudá-las.
+                              </p>
+                              <br>
+                              <p>
+                                   Mas o pior estava para acontecer…
+                              </p>
+                              <p>
+                                   O lobo havia ficado muito maior e bem mais poderoso.
+                              </p>
+                              <br>
+                              <p>
+                                   -Amateron: Não sei porque isso aconteceu essa explosão deveria
+                                   ter o matado mas ele só fica mais forte não importa o que fassamos, Hiroki ainda tem
+                                   poder?
+                              </p>
+                              <p>
+                                   -Hiroki: ainda posso criar mais uma Fênix
+                              </p>
+                              <p>
+                                   -Amateron: preste muita atenção no que eu vou dizer para vocês agora aquele
+                                   lobo absorve qualquer ataque e o transforma em vitalidade para si, não há como
+                                   matá-lo, não
+                                   assim.
+                              </p>
+                              <p>
+                                   -Rinorí: Como vamos sair dessa então?
+                              </p>
+                              <p>
+                                   -Amateron: a única maneira de derrotá- lo é selando ele só assim iremos conseguir.
+                              </p>
+                              <p>
+                                   -Hiroki: mas pra fazer um selo vamos precisar mobilizá-lo e depois…
+                              </p>
+                         </div>
+                         <div>
+                              <p>
+                                   -Amateron: ainda não terminei,
+                                   ele absorve poder então seria impossível mobilizá-lo o que vamos precisar é eu o
+                                   engula.
+                              </p>
+                              <p>
+                                   -Rinorí: vai comer esse lobo? Mas tudo que ele toca morre.
+                              </p>
+                              <p>
+                                   -Amateron: Humanos sim, Dragões não, minha magia é muito diferente da de vocês,
+                                   no mundo dos humanos nós dragões temos várias limitações de poder. Mas isso não nos
+                                   impede de termos imunidade a vários tipos de magia. Eu posso ir atacá-lo de
+                                   frente mais não tenho mais idade para isso minha defesa é muito baixa, por isso quero
+                                   que
+                                   você Hiroki
+                                   crie uma armadura de gelo para mim, assim minhas escamas vão ficar protegidas contra
+                                   as
+                                   garras desse lobo.
+                              </p>
+                              <br>
+                              <p>
+                                   Então assim seguindo seu
+                                   desejo Hiroki criou uma armadura para Amateron e logo após transmitiu parte de seu
+                                   poder
+                                   para suas escamas.
+                                   Contudo Amateron perderia, seus cristais e sua essência de dragão negro, para assim
+                                   virar.
+                              </p>
+                              <br>
+                              <p>
+
+                                   -Hiroki: Eu lhe nomeio, Dragão Negro das Chamas Congeladas
+                              </p>
+                         </div>
+                         <div>
+                              <img src="images/amaterondegelo.jpg" height="430px"
+                                   title="Amateron Dragão Negro das Chamas Congeladas" alt="Dragão De Gelo">
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+          <audio src="music/fairytale.mp3" controls autoplay loop>
+               <p>Seu navegador não suporta o elemento audio </p>
+          </audio>
+
+     </section>
+
+
+     <!-- SCRIPTS -->
+
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.parallax.js"></script>
+     <script src="js/custom.js"></script>
+     <script type="text/javascript">
+          $(function () {
+               var $mybook = $('#mybook');
+               var $bttn_next = $('#next_page_button');
+               var $bttn_prev = $('#prev_page_button');
+
+               $bttn_next.show();
+               $bttn_prev.show();
+               $mybook.show().booklet({
+                    overlays: false,
+                    name: null,                            //  
+                    width: 800,                             //  
+                    height: 500,                             //   
+                    speed: 600,                             //  
+                    direction: 'LTR',                           //  
+                    //  
+                    next: $bttn_next,          			//  
+                    prev: $bttn_prev,          			//
+
+               });
+          });
+
+     </script>
+     <script>
+          function enviar() {
+               var escolha = document.getElementById("personagens").value;
+               if (escolha == "scarlett") {
+                    //document.getElementById("gamebook").src = "cap2.html";
+                    window.location = "cap2.html";
+               } else {
+                    var erro = document.getElementById("erro").innerHTML = "Resposta Errada :( ";
+                    return erro;
+               }
+          }
+          function menu(capitulo) {
+               window.location = capitulo;
+          }
+     </script>
+     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+
+
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+     <script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+     <script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+
+     <link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+</body>
+
+</html>

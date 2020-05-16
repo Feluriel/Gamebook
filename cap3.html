@@ -30,7 +30,6 @@ http://www.tooplate.com/view/2085-neuron
     <!-- Main css -->
     <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.booklet.1.1.0.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 
@@ -184,6 +183,64 @@ http://www.tooplate.com/view/2085-neuron
         a#prev_page_button:hover {
             background-position: 0px 0px;
         }
+
+        .activo {
+            background-color: black;
+            color: white !important;
+        }
+
+        .activo:hover {
+            background-color: white;
+            color: black
+        }
+
+        .dropbtn {
+            background-color: white;
+            color: black;
+            padding: 13px;
+            font-size: 13px;
+            border: none;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: black;
+            color: white;
+        }
     </style>
 </head>
 
@@ -202,6 +259,14 @@ http://www.tooplate.com/view/2085-neuron
 
     <!-- Home Section -->
     <section>
+        <div class="dropdown">
+            <button class="dropbtn">Capítulos</button>
+            <div class="dropdown-content">
+                <a onclick="menu('cap1.html')">Capítulo 1</a>
+                <a onclick="menu('cap2.html')">Capítulo 2</a>
+                <a class="activo" onclick="menu('cap3.html')">Capítulo 3</a>
+            </div>
+        </div>
         <div class="book_wrapper">
             <a id="next_page_button"></a>
             <a id="prev_page_button"></a>
@@ -212,69 +277,75 @@ http://www.tooplate.com/view/2085-neuron
                         <h1>
                             Capítulo 3
                         </h1>
-                        
+
                         <h2>
                             <center>
-                            A caminhada até o castelo
-                        </center>
+                                A caminhada até o castelo
+                            </center>
                         </h2>
                         <br>
                         <p>
-                            Após dias de caminhada, os quatro acharam um lago, e um pasto muito belo, 
-                             havia montanhas por pertos em exclusivo uma com algumas ruinas, e monumentos históricos
-                             o barulho das aves que estavam por lá, era tão belo e relaxante 
-                             chegava a ser ridículo encontrarem um lugar como aquele em Miratry.                             
-                        </p>   
+                            Após dias de caminhada, os quatro acharam um lago, e um pasto muito belo,
+                            havia montanhas por pertos em exclusivo uma com algumas ruinas, e monumentos históricos
+                            o barulho das aves que estavam por lá, era tão belo e relaxante
+                            chegava a ser ridículo encontrarem um lugar como aquele em Miratry.
+                        </p>
                         <p>
-                            Chegaram a  pensar que talvez pudesse ser o último conforto que iriam ter, então 
-                            banharam-se em um lago nas proximidades para lavarem as feridas da batalha. 
-                        </p>  
+                            Chegaram a pensar que talvez pudesse ser o último conforto que iriam ter, então
+                            banharam-se em um lago nas proximidades para lavarem as feridas da batalha.
+                        </p>
                         <p>
-                            Scarlett achou algumas ervas medicinais que estavam ali por perto, que ajudou a aliviar a dor.               
-                        </p>    
+                            Scarlett achou algumas ervas medicinais que estavam ali por perto, que ajudou a aliviar a
+                            dor.
+                        </p>
                         <p>
-                            Os quatro subiram a montanha e sentaram-se bem no topo de, para apreciarem 
-                            o sol batendo em seus rostos a 
+                            Os quatro subiram a montanha e sentaram-se bem no topo de, para apreciarem
+                            o sol batendo em seus rostos a
                             brisa trazida pelo lago relfetida no vento, o mais incrível é que naquele lugar havia paz.
-                        </p>            
-                    </div> 
+                        </p>
+                    </div>
                     <div>
                         <br>
-                        <img src="images/conforto.jpg" height="250px" title="Paisagem histórica" alt="Paisagem histórica">
+                        <img src="images/conforto.jpg" height="250px" title="Paisagem histórica"
+                            alt="Paisagem histórica">
                         <br>
-                        <p> 
+                        <p>
                             -Rinorí: Eu não achei que apreciaria um pôr do sol como este mais.
                         </p>
-                        <p> -Elinthy: É eu tambem nao, 
-                            a ultima vez que apreciei um por do sol assim foi há muitos anos atrás, 
+                        <p> -Elinthy: É eu tambem nao,
+                            a ultima vez que apreciei um por do sol assim foi há muitos anos atrás,
                             quando meus pais ainda estavam vivos.</p>
-                    </div>   
+                    </div>
                     <div>
-                        <p> 
-                            -Scarlett: É realmente lindo não acham, depois que conseguirmos sair 
+                        <p>
+                            -Scarlett: É realmente lindo não acham, depois que conseguirmos sair
                             daqui temos que fazer isso mais veze,s só nós quatro.
                         </p>
-                        <p> 
-                            -Hiroki: Eu apoio a ideia, já que estamos aqui e partiremos cedo é melhor 
+                        <p>
+                            -Hiroki: Eu apoio a ideia, já que estamos aqui e partiremos cedo é melhor
                             aproveitarmos ao máximo.
                         </p>
                         <br>
-                        <p> 
-                            Os quatro deitaram-se na grama, estava quente e confortável, 
-                            mas logo a frente daquela paisagem havia um castelo abandonado envolvido por uma névoa negra, 
-                            era onde Magnus estava, para os lembrar de que o que era bom duraria pouco. 
-                        </p> 
+                        <p>
+                            Os quatro deitaram-se na grama, estava quente e confortável,
+                            mas logo a frente daquela paisagem havia um castelo abandonado envolvido por uma névoa
+                            negra,
+                            era onde Magnus estava, para os lembrar de que o que era bom duraria pouco.
+                        </p>
                         <br>
-                        <img src="images/castelomagnus.png" height="190px" title="Castelo Do Magnus" alt="castelomagnus">
+                        <img src="images/castelomagnus.png" height="190px" title="Castelo Do Magnus"
+                            alt="castelomagnus">
 
                     </div>
                     <div>
                         <p>
-                            Naquela noite dormiriam por ali para contemplarem o céu noturno, pois não sabiam se passariam daquela noite, 
-                            então estar ali faziam suas almas terem um descanso para no outro dia partirem para a jornada final.
+                            Naquela noite dormiriam por ali para contemplarem o céu noturno, pois não sabiam se
+                            passariam daquela noite,
+                            então estar ali faziam suas almas terem um descanso para no outro dia partirem para a
+                            jornada final.
                         </p>
-                        <p> 
-                            Passaram pelo resto do Vale, as batidas de seus corações ecoando a cada passo que davam, 
+                        <p>
+                            Passaram pelo resto do Vale, as batidas de seus corações ecoando a cada passo que davam,
                             quanto mais perto chegavam mais a ansiedade tomava conta de seus corações.
                         </p>
                         <br>
@@ -285,41 +356,42 @@ http://www.tooplate.com/view/2085-neuron
                         <p>
                             Todos param de andar para prestar atenção nele.
                         </p>
-                    </br>
-                    <p>
-                        -Hiroki: Finalmente nossa jornada está acabando, eu nunca tive companheiros tão atenciosos, 
-                        confiáveis e poderosos como vocês, caso aconteça alguma coisa comigo quero que vocês saibam que..
-                    </p>
-                    <p>
-                        -Scarlet: Nao vai acontecer nada ruim com você Hiroki. 
-                        Chegamos tão longe para alcançar nosso objetivo passamos por tanta coisa, 
-                        não pode acontecer nada com a gente por favor Hiroki prometa pra mim que vai tomar cuidado.
-                    </p>
+                        </br>
+                        <p>
+                            -Hiroki: Finalmente nossa jornada está acabando, eu nunca tive companheiros tão atenciosos,
+                            confiáveis e poderosos como vocês, caso aconteça alguma coisa comigo quero que vocês saibam
+                            que..
+                        </p>
+                        <p>
+                            -Scarlet: Nao vai acontecer nada ruim com você Hiroki.
+                            Chegamos tão longe para alcançar nosso objetivo passamos por tanta coisa,
+                            não pode acontecer nada com a gente por favor Hiroki prometa pra mim que vai tomar cuidado.
+                        </p>
                     </div>
                     <div>
                         <p>
                             -Hiroki: Scarllet...Eu...
                         </p>
                         <p>
-                            -Elinthy: Nós iremos até lá com toda confiança do mundo, 
+                            -Elinthy: Nós iremos até lá com toda confiança do mundo,
                             aquele castelo tem tudo para nos dar medo mas nós somos fortes sabemos disso…
                             Esse é o momento que nós vamos liberar todo o nosso poder.
                         </p>
                         <p>
-                            -Rinorí: Tenho medo do eu sou capaz, 
+                            -Rinorí: Tenho medo do eu sou capaz,
                             da última vez em que fiz isso, nao deu muito certo.
                         </p>
                         <p>
-                            -Elinthy: Eu confio em você Rinorí, eu sei que voce consegue, 
+                            -Elinthy: Eu confio em você Rinorí, eu sei que voce consegue,
                             voce esta com a gente, você está… está comigo.
                         </p>
 
                         <p>
-                             -Rinorí: Elinthy você nunca falou assim comigo.
+                            -Rinorí: Elinthy você nunca falou assim comigo.
                         </p>
                         <p>
-                            -Hiroki: Muito bem pessoal tudo que eu tenho a dizer 
-                            é que será uma grande honra lutar ao lado de vocês nessa batalha, 
+                            -Hiroki: Muito bem pessoal tudo que eu tenho a dizer
+                            é que será uma grande honra lutar ao lado de vocês nessa batalha,
                             e Scarllet irei tomar cuidado voltarei vivo, não se preocupe...Isso é uma promessa.
                         </p>
                         <br>
@@ -327,285 +399,33 @@ http://www.tooplate.com/view/2085-neuron
                             Então assim motivados e mais fortes do que nunca
                             partiram rumo ao castelo onde teriam o maior combate de suas vidas.
                         </p>
-                    </div>   
-                        <div>
-                            <h2>
-                            <center>
-                            Encontro com Magnus
-                         </center>
-                            </h2>
-                            <p>
-                                Chegaram na porta daquele castelo abandonado,
-                                 o vento estava forte e o castelo se contorcia,
-                                 a porta se abriu para eles revelando sentado em um trono Magnus 
-                                 com um sorriso malicioso em seu rosto.
-                            </p>
-                            <br>
-                            <p>
-                                -Magnus: Ora vejam só, minha amiga Scarlett trouxe seus companheiros para mim, 
-                                Elinthy você se tornou uma mulher mais bonita do que eu esperava, humm...
-                            </p>
-                            <br>
-                            <p>
-                                Rinorí se pois de frente de Elinthy, 
-                                como um ato de que ele estaria com ela e faria o momento valer a pena.
-                            </p>
-                            <br>
-                            <p>
-                                -Magnus: Hahahaha, muito bem Rinorí não é mesmo, bom conhecer você, 
-                                sabe que um dia eu sonhei que você era meu filho realmente seria um prodígio, 
-                                e Aqui temos Hiroki o mago mais poderoso é encantador ver todos vocês reunidos diante de mim, 
-                                então minha querida Scarlett pensou em minha oferta?
-                            </p>
-                    </div> 
-                    <div>
-                        <p>
-                            -Hiroki: Ela não é sua querida e nunca será nem por cima de meu cadáver!
-                        </p>
-                        <p>
-                            -Scarlett: Nunca nos aliariamos a você Magnus e não viemos virar seus escravos.
-                        </p>
-                        <p>
-                            -Elinthy: Eu vou fazer o seu coração podre sangrar e você vai gritar de dor quando minha espada perfurá-lo.
-                        </p>
-                        <p>
-                            -Rinorí: É melhor se levantar Magnus, se não quiser morrer sentado como um fraco,
-                             e quanto a Elinthy o único que irá tocar em cada centímetro do corpo dela sou eu.
-                        </p>
-                        <br>
-                        <p> 
-                            Magnus se levanta do trono e
-                            começa a caminhar em direção a eles seu lobo aparece 
-                            logo atrás trajado com uma armadura brilhante.
-                        </p>
-                        <br>
-                        <p>
-                            -Magnus: Já vi que não querem aceitar minha oferta. Oh gostam? 
-                            esse é meu, fiel escudeiro um lobo guerreiro que eu encontrei, e o nomiei de (Naoki)
-                            uma criatura sábia e magnífica se não querem juntar-se a mim então vão ter que enfrentar nossa ira.
-                        </p>
-                    </div>  
-                    <div>
-                        <img src="images/lobo.jpg" height="220px" title="Naoki" alt="Naoki">
-                        <p>
-                            O lobo avançou para Hiroki e Rinorí com apenas um salto suas presas enormes e um olhar perturbador, 
-                            quando olharam para o lobo juraram que ele poderia estar sorrindo.
-                        </p>
-                        <p> 
-                            Nesse momento Rinorí começou a tremer pois sabia que nenhuma de suas invocações teria o
-                             mínimo de chance contra o lobo ou o próprio Magnus então ele lembrou dos ensinamentos 
-                             de sua mãe e da invocação proibida. Amateron , o dragão das chamas negras, 
-                             a provável invocação mais forte de todo conhecimento do mágico, 
-                             então Rinorí não teve escolha levantou sua mão direita e bateu
-                        </p>
                     </div>
                     <div>
-                       <p>
-                            no chão invocando a mais 
-                            temida besta já invocada. Hiroki ficou admirado pois nunca viu algo tão grandioso em toda
-                            sua vida.
-                       </p>
-                       <br>
-                       <p>
-                           <strong>               
-                            -Amateron: QUEM OUSA ME TRAZER AO MUNDO DOS HUMANOS!?
-                        </strong>
-                       </p>
-                       <br>
-                       <p>  
-                           -Rinorí: Eu Rinorí Mendell por favor ó grande Amateron me ajude nessa batalha.
-                        </p>
-                        <br>
-                        <p>  
-                            <strong> 
-                            -Amateron: PORQUE EU DEVERIA AJUDAR VOCÊS HUMANOS, NÃO PASSAM DE MERAS… 
-                            </strong>
-                            Espere aquele ali é o Magnus?
-                        </p>
-                        <br>
-                        <p>  
-                            -Rinorí: Sim estamos enfrentando ele.
-                        </p>
-                        <p>
-                            -Amateron: Rinorí não é? Certo irei ajudá-lo nessa batalha pois tenho um caso pendente com Magnus
-                        </p>
-                        <p>  
-                            -Hiroki: Vão ficar aí conversando ou vão lutar? Está difícil aqui.
-                        </p>
-                        <br>
-                        <p> 
-                            Nesse momento Rinorí subiu em cima do Amateron e guiou ele até o lobo para que pudesse salvar Hiroki.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="images/amateron.jpg" height="430px" title="Amateron" alt="Amateron">
-                    </div>
-                    <div>
-                        <p>  
-                            -Hiroki: Vão ficar aí conversando ou vão lutar? Está difícil aqui.
-                        </p>
-                        <br>
-                        <p>
-                             Nesse momento Rinorí subiu em cima do Amateron e guiou ele até o lobo para que pudesse salvar Hiroki.
-                        </p>
-                        <br>
-                        <p>  
-                            -Rinorí: Durante esse intervalo o que descobriu?
-                        </p>
-                        <p>
-                            -Hiroki: É um necromante tudo que toca morre
-                        </p>
-                        <p>  
-                            -Rinorí: Então ataque físicos não são uma boa ideia
-                        </p>
-                        <p>  
-                            -Hiroki: Rinorí tem uma coisa que eu estava querendo te mostrar há um tempo.
-                        </p>
-                        <br>
-                        <p> 
-                            Então Hiroki pulou do dragão e criou um pássaro com sua magia e montou em cima dele
-                        </p>
-                        <p>  
-                            -Rinorí: Minha nossa ? não me diga que es um invocador também.
-                        </p>
-                        <br>
-                        <p> 
-                            -Hiroki: não isso é gelo, gelo maciço, mas eu posso modelá-lo e criar o que eu quiser, como esse pássaro
-                        </p>
-                    </div>
-                    <div>
-                        <img src="images/avedegelo.jpg" height="430px" title="Fênix De Gelo" alt="AveDeGelo">
-                    </div>
-                    <div>
-                        <p> 
-                            -Rinorí: Isso não é um pássaro é uma Fênix meu amigo.
-                        </p>
-                        <p>  
-                            -Hiroki: melhor assim mesmo.
-                        </p>
-                        <br>
-                        <p> 
-                            Então os dois partiram para cima do lobo, 
-                            Rinorí e Amateron tentaram queimar o lobo enquanto a Fênix de Hiroki atiravam espinhos 
-                            de gelo com suas asas contra o lobo.
-                            Era inútil, quanto mais o atacavam parecia estar ficando mais forte.
-                        </p>
-                        <br>
-                        <p>  
-                            -Amateron: é inútil Rinorí se continuarmos atacando desse
-                            jeito você ficará sem magia e não vai ter forças para me manter nesse mundo, vamos recuar.
-                        </p>
-                        <p>  
-                            -Rinorí: Não podemos eu prometi pra Elinthy que 
-                            eu voltaria só quando eu derrotasse essa besta. Eu não vou recuar!
-                        </p>
-                        <p> 
-                            -Amateron: vocês humanos são mesmo criaturas interessantes, mesmo sem chances de vitória continuam lutando
-                        </p>
-                        <p> 
-                            -Hiroki: não mesmo, enquanto eu puder me mover eu vou lutar não importa o que aconteça.
-                        </p>
-                        <p> 
-                            Motivados os dois tentaram dar um poderoso ataque em conjunto 
-                        </p>
-                    </div>
-                    <div>
-                        <p>  
-                            -Hiroki: Rinorí incendeie essa Fênix
-                        </p>
-                        <p>  
-                            -Rinorí: o que? Você tá maluco?
-                        </p>
-                        <p> 
-                            -Hiroki: Você e o Amateron fiquem atrás de mim vou precisar de vocês para sair dessa com vida.
-                        </p>
-                        <p>  
-                            -Rinorí: Tudo mas tenha muito cuidado.
-                        </p>
-                        <br>
-                        <p> 
-                            Então Rinori ordenou que Amateron cuspisse fogo contra a Fênix de 
-                            Hiroki, Hiroki junto com a sua Fênix em chamas se jogou com tudo pra cima do lobo de Magnus e pulou segundos 
-                            antes de sua Fênix se chocar contra o lobo então assim Amateron conseguiu pegar Hiroki em suas costas.
-                        </p>
-                        <br>
-                        <p> 
-                            -Rinorí: Deu um medo aqui Hiroki mas ainda assim  foi incrível,
-                             que pena que aquela obra de arte foi junto com o lobo.
-                        </p>
-                        <p> 
-                            -Hiroki: Mas a arte é isso Rinorí, a arte… 
-                            <strong>
-                                É UMA EXPLOSÃO.
-                            </strong>        
-                        </p>
-                        <br>
-                        <p> 
-                            Nesse momento a Fênix de Hiroki explodiu em cima do lobo, só para garantir que ele realmente estava morto.
-                        </p>
-                    </div>
-                    <div>
-                        <p>  
-                            -Rinorí: Isso foi incrível, agora vamos atrás das duas para ajudá-las.
-                        </p>
-                        <br>
-                        <p> 
-                            Mas o pior estava para acontecer…
-                        </p>
-                        <p>
-                            O lobo havia ficado muito maior e bem mais poderoso.
-                        </p>
-                        <br>
-                        <p> 
-                            -Amateron: Não sei porque isso aconteceu essa explosão deveria 
-                            ter o matado mas ele só fica mais forte não importa o que fassamos, Hiroki ainda tem poder?
-                        </p>
-                        <p> 
-                            -Hiroki: ainda posso criar mais uma Fênix
-                        </p>
-                        <p> 
-                            -Amateron: preste muita atenção no que eu vou dizer para vocês agora aquele
-                            lobo absorve qualquer ataque e o transforma em vitalidade para si, não há como matá-lo, não assim.
-                        </p>
-                        <p>  
-                            -Rinorí: Como vamos sair dessa então?
-                        </p>
-                        <p>  
-                            -Amateron: a única maneira de derrotá- lo é selando ele só assim iremos conseguir.
-                        </p>
-                        <p>  
-                            -Hiroki: mas pra fazer um selo vamos precisar mobilizá-lo e depois…
-                        </p>
-                    </div>
-                    <div>
-                        <p> 
-                            -Amateron: ainda não terminei, 
-                            ele absorve poder então seria impossível mobilizá-lo o que vamos precisar é eu o engula.
-                        </p>
-                        <p> 
-                            -Rinorí: vai comer esse lobo? Mas tudo que ele toca morre.
-                        </p>
-                        <p> 
-                            -Amateron: Humanos sim, Dragões não, minha magia é muito diferente da de vocês, 
-                            no mundo dos humanos nós dragões temos várias limitações de poder. Mas isso não nos 
-                            impede de termos imunidade a vários tipos de magia. Eu posso ir atacá-lo  de 
-                            frente mais não tenho mais idade para isso minha defesa é muito baixa, por isso quero que você Hiroki 
-                            crie uma armadura de gelo para mim, assim minhas escamas vão ficar protegidas contra as garras desse lobo.
-                        </p>
-                        <br>
-                        <p> 
-                            Então assim seguindo seu 
-                            desejo Hiroki criou uma armadura para Amateron e logo após transmitiu parte de seu poder para suas escamas.
-                            Contudo Amateron perderia, seus cristais e sua essência de dragão negro, para assim virar.
-                        </p>
-                        <br>
-                        <p>  
-                            
-                            -Hiroki: Eu lhe nomeio, Dragão Negro das Chamas Congeladas
-                        </p>
-                    </div>
-                    <div>
-                        <img src="images/amaterondegelo.jpg" height="430px" title="Amateron Dragão Negro das Chamas Congeladas" alt="Dragão De Gelo">
+                        <section class="spacing contact">
+                            <div class="container">
+                                <center>
+                                    <h2>
+                                        Uma voz vos fala.
+                                    </h2>
+                                </center>
+                                <br>
+                                <label for="personagens" style="font-size: 15px;">Se chegaram até aqui,
+                                    está na hora de escolher o que vão seguir, a felicidade? a destruição
+                                    ou o impasse? vocês esclheram e vão continuar escolhendo seus destinos.
+                                    dessa vez não será diferente
+                                    O que viraria 3 menos 1?..</label>
+                                <br><br><br>
+                                <select id="personagens">
+                                    <option value="escolha1">Escolha um</option>
+                                    <option value="escolha2">Escolha dois</option>
+                                    <option value="escolha3">Escolha três</option>
+                                    <option value="escolha4">Escolha quatro</option>
+                                </select>
+                                <button onclick="enviar()">Enviar</button>
+                                <div id="erro">
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
@@ -647,14 +467,27 @@ http://www.tooplate.com/view/2085-neuron
     </script>
     <script>
         function enviar() {
-            var escolha = document.getElementById("magnus").value;
-            if (escolha == "3") {
+            var escolha = document.getElementById("personagens").value;
+            if (escolha == "escolha1") {
                 //document.getElementById("gamebook").src = "cap2.html";
-                window.location = "cap3.html";
-            } else {
-                var erro = document.getElementById("erro").innerHTML = "Resposta Errada :( ";
-                return erro;
+                window.location = "escolha1.html";
             }
+            if (escolha == "escolha2") {
+                //document.getElementById("gamebook").src = "cap2.html";
+                window.location = "escolha2.html";
+            }
+            if (escolha == "escolha3") {
+                //document.getElementById("gamebook").src = "cap2.html";
+                window.location = "escolha3.html";
+            }
+            if (escolha == "escolha4") {
+                //document.getElementById("gamebook").src = "cap2.html";
+
+            }
+
+        }
+        function menu(capitulo) {
+            window.location = capitulo;
         }
     </script>
 

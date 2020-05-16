@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+     <script src="https://sites.google.com/site/novoefeitoneve/home/novoefeitoneve/snowstorm.js"></script>
+     <!--
+     Icon Do GameBook
+
+<link rel="shortcut icon" href="favicon.ico">
+
+-->
+
+     <title>The Age of Exiles</title>
+     <!--
+
+Template 2085 Neuron
+
+http://www.tooplate.com/view/2085-neuron
+
+-->
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+
+     <!-- Main css -->
+     <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
+     <link rel="stylesheet" href="css/jquery.booklet.1.1.0.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+
+     <style>
+          * {
+               margin: 0;
+               padding: 0;
+          }
+
+          h1 {
+               text-align: center;
+          }
+
+          body {
+               background: url('images/textura.jpg');
+               color: #444;
+               font-size: 12px;
+               color: #333;
+               font-family: 'Oswald', sans-serif;
+          }
+
+          .booklet {
+               width: 900px;
+               height: 607px;
+               position: relative;
+               margin: 0 auto 10px;
+               box-shadow: 0px 0px 1px #fff;
+
+          }
+
+          .booklet .b-wrap-left {
+               background: #fff url(images/left_bg.jpg) no-repeat top left;
+               -webkit-border-top-left-radius: 10px;
+               -webkit-border-bottom-left-radius: 10px;
+               -moz-border-radius-topleft: 10px;
+               -moz-border-radius-bottomleft: 10px;
+               border-top-left-radius: 10px;
+               border-bottom-left-radius: 10px;
+          }
+
+          .booklet .b-wrap-right {
+               background: #efefef url(images/right_bg.jpg) no-repeat top left;
+               -webkit-border-top-right-radius: 10px;
+               -webkit-border-bottom-right-radius: 10px;
+               -moz-border-radius-topright: 10px;
+               -moz-border-radius-bottomright: 10px;
+               border-top-right-radius: 10px;
+               border-bottom-right-radius: 10px;
+          }
+
+          .booklet .b-counter {
+               bottom: 10px;
+               position: absolute;
+               display: block;
+               width: 90%;
+               height: 20px;
+               border-top: 1px solid #ddd;
+               columns: rgba(34, 34, 34, 0.02);
+               text-align: center;
+               font-size: 12px;
+               padding: 5px 0 0;
+               background: transparent;
+               -moz-box-shadow: 0px -1px 1px #fff;
+               -webkit-box-shadow: 0px -1px 1px #fff;
+               box-shadow: 0px -1px 1px #fff;
+               opacity: 0.8;
+          }
+
+          .book_wrapper {
+               margin: 0 auto;
+               padding-top: 50px;
+               width: 905px;
+               position: relative;
+               background: transparent url(images/bg.png) no-repeat 9px 27px;
+               text-align: justify;
+          }
+
+          .book_wrapper h1 {
+               color: black;
+               margin: 5px 5px 5px 15px;
+               font-size: 24px;
+               font-family: 'Times New Roman', Times, serif;
+               padding-bottom: 7px;
+               text-transform: uppercase;
+               font-weight: 700;
+          }
+
+          .book_wrapper p {
+               font-size: 15px;
+               margin: 5px 5px 5px 15px;
+          }
+
+          .book_wrapper a.article,
+          .book_wrapper a.demo {
+               background: transparent url(images/circle.png) no-repeat 50% 0px;
+               display: block;
+               width: 95px;
+               height: 41px;
+               text-decoration: none;
+               outline: none;
+               font-size: 16px;
+               color: #555;
+               float: left;
+               line-height: 41px;
+               padding-left: 47px;
+          }
+
+          .book_wrapper a.demo {
+               margin-left: 50px;
+          }
+
+          .book_wrapper a.article:hover,
+          .book_wrapper a.demo:hover {
+               background-position: 50% -41px;
+               color: #13386a;
+          }
+
+          .book_wrapper img {
+               margin: 10px 0px 5px 35px;
+               width: 300px;
+               padding: 2px;
+          }
+
+          a#next_page_button,
+          a#prev_page_button {
+               display: none;
+               position: absolute;
+               width: 41px;
+               height: 40px;
+               cursor: pointer;
+               margin-top: -20px;
+               top: 50%;
+               background: transparent url(images/buttons.png) no-repeat 0px -40px;
+          }
+
+          a#prev_page_button {
+               left: -30px;
+          }
+
+          a#next_page_button {
+               right: -30px;
+               background-position: -41px -40px;
+          }
+
+          a#next_page_button:hover {
+               background-position: -41px 0px;
+          }
+
+          a#prev_page_button:hover {
+               background-position: 0px 0px;
+          }
+
+          .activo {
+               background-color: black;
+               color: white !important;
+          }
+
+          .activo:hover {
+               background-color: white;
+               color: black
+          }
+
+          .dropbtn {
+               background-color: white;
+               color: black;
+               padding: 13px;
+               font-size: 13px;
+               border: none;
+          }
+
+          /* The container <div> - needed to position the dropdown content */
+          .dropdown {
+               position: relative;
+               display: inline-block;
+          }
+
+          /* Dropdown Content (Hidden by Default) */
+          .dropdown-content {
+               display: none;
+               position: absolute;
+               background-color: #f9f9f9;
+               min-width: 160px;
+               box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+               z-index: 1;
+          }
+
+          /* Links inside the dropdown */
+          .dropdown-content a {
+               color: black;
+               padding: 12px 16px;
+               text-decoration: none;
+               display: block;
+          }
+
+          /* Change color of dropdown links on hover */
+          .dropdown-content a:hover {
+               background-color: #f1f1f1;
+               color: black;
+          }
+
+          /* Show the dropdown menu on hover */
+          .dropdown:hover .dropdown-content {
+               display: block;
+          }
+
+          /* Change the background color of the dropdown button when the dropdown content is shown */
+          .dropdown:hover .dropbtn {
+               background-color: black;
+               color: white;
+          }
+     </style>
+</head>
+
+<body>
+
+     <!-- PRE LOADER -->
+
+     <div class="preloader">
+          <div class="sk-spinner sk-spinner-wordpress">
+               <span class="sk-inner-circle"></span>
+          </div>
+     </div>
+
+     <!-- Navigation section  -->
+
+
+     <!-- Home Section -->
+     <section>
+          <div class="book_wrapper">
+               <a id="next_page_button"></a>
+               <a id="prev_page_button"></a>
+
+               <div id="mybook" style="display:none;">
+                    <div class="b-load">
+                         <div>
+                              <p>Chegaram na entrada do castelo, o vento rugia ao redor, sentiram um poder enorme do
+                                   lado de dentro e quando entraram encontraram Magnus no rall de entrada. </p>
+
+                              <p>-Magnus: Ora vejam só quem vieram ao meu encontro. Sabe eu ainda me perguntei se vocês
+                                   realmente teriam a audácia de virem ate mim confesso que nesse sentido eu subestimei
+                                   vocês. </p>
+
+                              <p>-Hiroki: Você não e pário para nós e estamos dispostos a passar pelo que for para
+                                   voltarmos para casa. </p>
+
+                              <p>Assim você me deixa triste poderia ao menos dizer como se sente feliz em me ver,
+                                   Scarlett meu amor que decepção em saber que você o prefere do que a mim, como estou
+                                   vendo vocês não vieram se unir a mim certo? </p>
+
+                              <p>-Elinthy: Nunca faríamos tal coisa. </p>
+
+                              <p>-Magnus: Então morram. </p>
+                         </div>
+                         <div>
+                              <p>Assim apareceu o lobo de Magnus atrás de Elinthy e Scarlett e a frente de Rinorí e
+                                   Hiroki estava Magnus, esse seriam o seu maior desafio, para poderem provar suas
+                                   dignidades. </p>
+
+                              <p>Luta de Scarlett e Elinthy com o Lobo: </p>
+
+                              <p>Scarlett jamais vira um lobo como aquele, sem duvida esalava cheiro de magia necromante
+                                   mais ele era quem provinha Magnus, uma alma da sabedoria vivia dentro do lobo, quando
+                                   Scarlett se deu conta de que Elinthy ia para cima do lobo sua espada empunhada
+                                   atacou-o mais ele levantou a pata para golpear acertando Elinthy que caiu do outro
+                                   lado da sala, Scarlett sbia que elas não teriam chances com aquele lobo. </p>
+
+                              <p>-Scarlett: ELINTHY! Consegue ganhar tempo pra mim quero testar uma coisa, acho que
+                                   podemos atrasá-lo. </p>
+
+                              <p>-Elinthy: Claro eu atraso ele para você. </p>
+
+                              <p>Elinthy foi novamente para cima do lobo, e quando ele foi tentar golpea-la com a pata
+                                   novamente ela deslizou pelo chão e diferiu um corte na perna do lobo que o fez
+                                   cambalear e recuar um pouco. </p>
+                         </div>
+                         <div>
+                              <p>Como Scarlett pensava, o golpe que Elinthy diferiu no lobo surtiu efeito em Magnus
+                                   também suas almas estavam conectadas de alguma forma, Scarlett se concentrou e então
+                                   ela viu, Magnus encontrado aquele lobo e o voto de vida que fizeram um para o outro,
+                                   sendo assim se um perdesse a vida o outro perderia metade de seus poderes, ela teria
+                                   que afetar aquela alma de algum modo. </p>
+
+                              <p>Elinthy viu que o corte que fizera tinha surtido efeito então ativou seu frenesi de
+                                   batalha e partiu para cima do lobo com os olhos sedentos. Ela se esquivava com muita
+                                   facilidade dele e o cortava cada vez mais, ela e sua espada pareciam uma todos os
+                                   golpes completamente calculados e o lobo cambaleava de um lado para o outro, nem
+                                   mesmo a magia necromante atigia-lhe naquele momento. </p>
+
+                              <p>Scarlett dentro da alma viu quem abrigava ali, um ser que ela jamais havia visto. </p>
+
+                              <p>-???: Meu nome é Hivisk quem é você para entra em minha mente desta froma. </p>
+
+                              <p>-Scarlett: Vou mata-lo Hivisk, isto é tudo que precisa saber de mim. </p>
+
+                         </div>
+                         <div>
+                              <p>Scarlett pegou sua lança e partiu para cima de Hivisk aquela alma seria a mais forte
+                                   que ela enfrentaria em toda sua vida, era realmente muito poderoso, como se prevêsse
+                                   todos os seus golpes ele se esquivava com muita facilidade, ela não poderia falhar
+                                   Elinthy estava ganhando tempo para ela do lado de fora, precisava continuar tentando.
+                              </p>
+
+                              <p>-Hivisk: Admiro-lhe por sua tentativa mas você certamente mecheu com o espirito errado
+                                   não tenho tempo para brincar com crianças. </p>
+
+                              <p>-Scarlett: Eu não sou criança. </p>
+
+                              <p>Scarlett partiu para cima novamente e dessa vez acertou um golpe em Hivisk que o fez
+                                   cair. </p>
+
+                         </div>
+                         <div>
+                              <p> O pelo do lobo não era mais branco, estava banhado de sangue, Elinthy estava começando
+                                   a fazer picadinho dele até que ele caiu. Elinthy percebeu que Scarlett tinha ido ao
+                                   encontro da alma do lobo, pois seu corpo estava flutuando em volta de uma bolha
+                                   verde. O lobo havia desmaiado sua respiração estava mais que um leve sopro, então
+                                   Elinthy se aproximou e daria um ultimo golpe nele com a espada erguida Elinthy a
+                                   desceu em direção a cabeça do lobo, mas era tarde de mais. </p>
+
+                              <p>Scarlett viu aquela cena enquanto Hivisk levantou subitamente e a segurou pelo pescoço,
+                                   era tarde de mais, antes que Elinthy decesse sua espada o lobo mordeu-lhe sua
+                                   garganta Scarlett sentiu a dor de Elinthy que olhou no fundo dos olhos do lobo
+                                   sabendo que Scarlett a via e disse seu ultimo pensamento “Eu tentei desculpe-me”
+                                   antes de curvar sua cabeça para baixo e morrer ali na boca daquele lobo. </p>
+
+                              <p>Scarlett soltou um grunhido perdêra uma amiga, uma mulher linda, incrível ela tinha
+                                   deixado que isso acontecesse com Elinthy. </p>
+                         </div>
+                         <div>
+                              <p>-Hivisk: Está vendo o que acontece quando alguma criança tenta brincar comigo, morra.
+                              </p>
+
+                              <p>Scarlett estava sendo sufocada seus pulmões já estavam sem ar mas as palavras de Hivisk
+                                   pesaram mais em seu coração ela não deixaria que Elinthy morresse em vão então disse:
+                              </p>
+
+                              <p>-Scarlett:”Dimittere te”. Que significa “Libero você”. </p>
+
+                              <p>A alma de Hivisk começou a ser sugada, ela tinha liberado sua alma para os confins ele
+                                   não poderia voltar novamente, para seu mestre aquele que cuidara dele durante muito
+                                   tempo. </p>
+
+                              <p>-Hivisk: Sua garota estupida, NÃOO!. </p>
+                              <p>Scarlett fez o q deveria fazer expulsou a alma de Hivisk para os confins ele nunca mais
+                                   poderia voltar para Magnus, quando ela se virou de costas para aquela alma, sentiu. A
+                                   dor a consumia por dentro sua lança a perfurara o coração e a deixara empalada,
+                                   Hivisk sorriu ao ver Scarlett se contorcer empalada em sua própria lança que ele
+                                   lançara nela e disse: </p>
+                         </div>
+                         <div>
+                              <p>-Hivisk: Minha missão está feita mestre. E desapareceu. </p>
+
+                              <p>Era o fim de Scarlett, seu ultimo suspiro veio e ela morreu ali olhando para o corpo de
+                                   Elinthy sua garganta aberta, toda ensanguentada, e aquele lobo de olhos arregalados
+                                   completamente sem vida ao lado de Elinthy. </p>
+
+                              <p>Luta de Rinorí e Hiroki contra Magnus: </p>
+
+                              <p>-Magnus: Vocês deveriam ter aceitado minha oferta, são tão ingênuos a ponto de pensar
+                                   que deixarei vocês saírem vivos daqui. </p>
+
+                              <p>-Rinorí: Não nos subestime Magnus você pode se surpreender, e mesmo que não saiamos
+                                   vivos hoje nós levaremos uma parte de você conosco. </p>
+
+                              <p>Magnus explodiu fogo para todos os lados, Hiroki fez uma barreira de gelo para se
+                              <p>defender, mas ela se desfez mais rápido do que ele esperava. Rinorí abaixou-se no chão
+                                   para desviar do fogo. </p>
+                         </div>
+                         <div>
+                              <p>Hiroki avançou pra cima de Magnus cetros se chocaram e eles entraram em uma luta
+                                   corporal, Rinorí foi para cima assim como Hiroki mais então Magnus atirou fogo
+                                   novamente, mas não antes que Rinorí o atingisse com o cajado. </p>
+                              <p>Hiroki pulou em cima de Magnus e os dois saíram rolando, Magnus deu um soco no estomago
+                                   de Hiroki que cambaleou, mas Rinori já vinha atrás para forçar ouro golpe contra
+                                   Magnus, mas ele o atingiu com fogo, que deixou a manga de sua blusa em fagulhos e uma
+                                   queimadura em seu braço. </p>
+
+                              <p>Magnus levantou mais caiu, sem nada o ter atingido, foi tudo muito rápido a espada de
+                                   Elinthy, seu lobo caído ao chão, Scarlett empalada em sua própria lança, e escutou
+                                   quando seu miais fiel amigo o deixou, Magnus perdeu metade de seus poderes, sua magia
+                                   de necromancia acabara de deixar-lhe. </p>
+
+                              <p>Hiroki e Rinori viram o que tiha deixado Magnus tão atordoado pois os próprios estam,
+                                   as duas ali mortas, gelo explodiu sobre a sala, Rinori deu um grito de fúria chamando
+                                   o nome de Elinthy. </p>
+                         </div>
+                         <div>
+                              <p>Hiroki concentrou todo seu poder, seus olhos brilharam azuis e começaram a deixar
+                                   rastro de fumaça azul, Rinori atendeu a atitude de Hiroki e também se concentrou,
+                                   seus olhos ficaram negros brilhantes também exalando fumaça. Eles usariam seus
+                                   poderes para a transformação final afim de acabar com a vida de Magnus. </p>
+
+                              <p>A invocação final seria uma fênix negra, vinda de Hiroki e Rinorí, ela seria a salvação
+                                   após o ocorrido, a fênix se materializou na frente de Magnus, que se levantou com um
+                                   pouco de dificuldade. </p>
+
+                              <p>-Hiroki: Por Scarlett. </p>
+
+                              <p>-Rinorí: Por Elinthy. </p>
+
+                              <p>A fenis foi para cima de Magnus que teve que correr para um canto, lutar contra aquela
+                                   criatura sem a ajuda de seu lobo, metade de sua magia se fora, ele estava em
+                                   desvantagem, mas nem por um momento deixaria que todo seu sacrifício durante muitos
+                                   anos tivesse sido em vão. </p>
+                         </div>
+                         <div>
+                              <p>A fênix foi para cima de Magnus que se esquivou dela, ele correu para frente e golpeou
+                                   Rinorí que estava com a guarda baixada, hiroki tentou acertar Magnus com seu cajado
+                                   mais não deu muito certo, suas forças se eusariam muito rápido por causa da
+                                   invocação, seus sentidos ficariam menos aguçados, Hiroki e Rinori cambalearam para um
+                                   lado, e a Fenix veio para onde Magnus estava, voou baixo e bateu o bico nas costas de
+                                   Magnus fazendo-o cair no chão, assim ela deu uma volta e retornou com as garras
+                                   expostas, cravou as garras nas costas de Magnus que urrou de dor. </p>
+
+                              <p>Com os ombros sangrando Magnus estava sendo levado para cima, aquele pássaro inútil
+                                   tinha o ferido muito, a dor que sentira quando as garras perfuraram-lhe a pele, e o
+                                   sangue jorrou quente e úmido ao mesmo tempo, juntamente com o suor que escorria, ele
+                                   pensava que seria o fim dele ali, mas não podia perder para aquelas crianças que
+                                   nunca souberam o que era perder na vida. </p>
+                         </div>
+                         <div>
+                              <p>A Fenix já estava o mais alto que conseguia, então com as garras cheias de sangue
+                                   fresco, soltou Magnus la de cima que despencou chocando-se ao chão, soltou um grito
+                                   agonizante de dor, o impacto foi muito forte e fez com que o braço de Magnus
+                                   quebrasse, seu osso saiu pelo braço ficando completamente pendurado, ele olhou para
+                                   Hiroki e Rinorí com tremendo ódio. </p>
+
+                              <p>Hiroki e Rinorí se deliciaram a ver o sofrimento de Magnus, fariam com que aquilo
+                                   durasse tempo suficiente até que Magnus quebrasse,e morreria pedindo por
+                                   misericórdia, mas Magnus não perderia facilmente. Ele se levantou com o braço
+                                   pendendo sobre o corpo e correu, a Fenix vinha em direção a ele novamente, mas ele se
+                                   abaixou e com seu cetro rasgou a barriga da Fenix ate sua garganta, perfurando seu
+                                   crânio. </p>
+
+                              <p>Hiroki e Rinorí se assustaram, tentaram correr para o outro lado da sala, mas Magnus
+                                   veio cambaleante, para cima deles. </p>
+
+                         </div>
+                         <div>
+                              <p>-Rinorí: Vá Hiroki, eu vou atrasá-lo. </p>
+
+                              <p>-Hiroki: Não, eu já perdi a Scarlett, a Elinthy se foi e não posso ver meu amigo ir
+                                   também. </p>
+
+                              <p>-Rinorí: Como é Hiroki eu nunca me entregaria de bandeja. </p>
+
+                              <p>-Hiroki: Não posso permitir. </p>
+
+                              <p>Rinorí foi ao encontro de Magnus, derrubou-o no chão e gritou para que Hiroki fosse,
+                                   seu amigo estava se sacrificando por ele, ele teria que acabar com Magnus a qualquer
+                                   custo, seu amigo, não poderia perde-lo também, mas então ouviu o grito de Rinorí,
+                                   sendo queimado vivo em cima de Magnus seus gritos ecoaram nos ouvidos de Hiroki,
+                                   então ele caiu e começou a chorar. </p>
+
+                              <p>-Hiroki: NÃÃÃÃOOO! RINORÍÍÍÍÍÍÍ.MORRA MAGNUS. </p>
+
+                              <p>Rinorí foi atirado para um lado por Magnus, seu corpo tornando-se cincas, o cheiro de
+                                   pele queimada tomou conta do lugar, Hiroki avançou contra Magnus que estava com a
+                                   espada de Elinthy em mãos. </p>
+
+                         </div>
+                         <div>
+                              <p>-Magnus: Você vai morrer pela espada dela, eu disse para não me subestimar, agora você
+                                   ira sentir todo meu ódio. </p>
+
+                              <p>Magnus atacou e Hiroki levantou uma barreira de gelo que explodiu em sua frente, Magnus
+                                   atacou com a espada novamente, Hiroki se esquivou e acertou o braço quebrado de
+                                   Magnus, ele gritou de dor e atirou fogo. </p>
+
+                              <p>Hiroki se abaixou e aproveitou a oportunidade para dar mais um golpe, Magnus estava de
+                                   joelho no chão quando Hiroki levantou seu cetro Magnus se levantou dando uma rasteira
+                                   em Hiroki que foi ao chão, e a espada estava em sua garganta. </p>
+
+                              <p>Naquele momento Hiroki viu a morte, seus amigos o chamando do outro lado a voz de
+                                   Scarlett, então ele disse. </p>
+
+                              <p>-Hiroki: Esperem por mim. E fechou os olhos quando teve sua cabeça decaptada por
+                                   Magnus. </p>
+
+                              <p>-Magnus: Isso é dor. </p>
+
+                              <p>Magnus jogou a espada para um lado segurando a cabeça de Hiroki, foi até seu lobo, que
+                                   estava destroçado ao canto da sala. </p>
+
+                              <p>-Magnus: Eu vinguei você Hivisk, espere por mim nos confins meu fiel amigo, devo minha
+                                   vida a você. </p>
+                         </div>
+
+                         <div>
+                              <p>Então ele saiu do castelo, empalou a cabeça de Hiroki bem na entrada e ateou fogo no
+                                   castelo, que se explodiu atrás dele mais continuou andando, com um sorriso Maligno em
+                                   seu rosto, e lá foi ele, para o Vilarejo matar a todos que fizeram mal para seu lobo.
+                              </p>
+                         </div>
+                    </div>
+               </div>
+               <audio src="music/fairytale.mp3" controls autoplay loop>
+                    <p>Seu navegador não suporta o elemento audio </p>
+               </audio>
+     </section>
+     <!-- SCRIPTS -->
+
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.parallax.js"></script>
+     <script src="js/custom.js"></script>
+     <script type="text/javascript">
+          $(function () {
+               var $mybook = $('#mybook');
+               var $bttn_next = $('#next_page_button');
+               var $bttn_prev = $('#prev_page_button');
+
+               $bttn_next.show();
+               $bttn_prev.show();
+               $mybook.show().booklet({
+                    overlays: false,
+                    name: null,                            //  
+                    width: 800,                             //  
+                    height: 500,                             //   
+                    speed: 600,                             //  
+                    direction: 'LTR',                           //  
+                    //  
+                    next: $bttn_next,          			//  
+                    prev: $bttn_prev,          			//
+
+               });
+          });
+
+     </script>
+     <script>
+          function enviar() {
+               var escolha = document.getElementById("personagens").value;
+               if (escolha == "scarlett") {
+                    //document.getElementById("gamebook").src = "cap2.html";
+                    window.location = "cap2.html";
+               } else {
+                    var erro = document.getElementById("erro").innerHTML = "Resposta Errada :( ";
+                    return erro;
+               }
+          }
+          function menu(capitulo) {
+               window.location = capitulo;
+          }
+     </script>
+     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+
+
+     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+     <script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+     <script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+
+     <link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+</body>
+
+</html>

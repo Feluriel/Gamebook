@@ -30,7 +30,6 @@ http://www.tooplate.com/view/2085-neuron
      <!-- Main css -->
      <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
      <link rel="stylesheet" href="css/jquery.booklet.1.1.0.css">
-
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 
@@ -39,9 +38,11 @@ http://www.tooplate.com/view/2085-neuron
                margin: 0;
                padding: 0;
           }
-          h1{
+
+          h1 {
                text-align: center;
           }
+
           body {
                background: url('images/textura.jpg');
                color: #444;
@@ -102,7 +103,6 @@ http://www.tooplate.com/view/2085-neuron
                margin: 0 auto;
                padding-top: 50px;
                width: 905px;
-               height: 620px;
                position: relative;
                background: transparent url(images/bg.png) no-repeat 9px 27px;
                text-align: justify;
@@ -182,6 +182,62 @@ http://www.tooplate.com/view/2085-neuron
           a#prev_page_button:hover {
                background-position: 0px 0px;
           }
+          .activo {
+               background-color: black ;
+               color: white !important;
+          }
+          .activo:hover{
+               background-color: white;
+               color: black
+          }
+
+          .dropbtn {
+               background-color: white;
+               color: black;
+               padding: 13px;
+               font-size: 13px;
+               border: none;
+          }
+
+          /* The container <div> - needed to position the dropdown content */
+          .dropdown {
+               position: relative;
+               display: inline-block;
+          }
+
+          /* Dropdown Content (Hidden by Default) */
+          .dropdown-content {
+               display: none;
+               position: absolute;
+               background-color: #f9f9f9;
+               min-width: 160px;
+               box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+               z-index: 1;
+          }
+
+          /* Links inside the dropdown */
+          .dropdown-content a {
+               color: black;
+               padding: 12px 16px;
+               text-decoration: none;
+               display: block;
+          }
+
+          /* Change color of dropdown links on hover */
+          .dropdown-content a:hover {
+               background-color: #f1f1f1
+          }
+
+          /* Show the dropdown menu on hover */
+          .dropdown:hover .dropdown-content {
+               display: block;
+          }
+
+          /* Change the background color of the dropdown button when the dropdown content is shown */
+          .dropdown:hover .dropbtn {
+               background-color: black;
+               color: white;
+          }
      </style>
 </head>
 
@@ -200,6 +256,14 @@ http://www.tooplate.com/view/2085-neuron
 
      <!-- Home Section -->
      <section>
+          <div class="dropdown">
+               <button class="dropbtn">Capítulos</button>
+               <div class="dropdown-content">
+                 <a onclick="menu('cap1.html')">Capítulo 1</a>
+                 <a class="activo" onclick="menu('cap2.html')">Capítulo 2</a>
+                 <a onclick="menu('cap3.html')">Capítulo 3</a>
+               </div>
+             </div>
           <div class="book_wrapper">
                <a id="next_page_button"></a>
                <a id="prev_page_button"></a>
@@ -264,26 +328,28 @@ http://www.tooplate.com/view/2085-neuron
                                    alt="">
 
                          </div>
-                          <!-- Pensamento -->
+                         <!-- Pensamento -->
                          <div>
                               <p>
-                                   -Hiroki: Eu nao sei mais o que podemos fazer já estamos aqui a dias nesse vale e qual o
+                                   -Hiroki: Eu nao sei mais o que podemos fazer já estamos aqui a dias nesse vale e qual
+                                   o
                                    propósito?
                                    nao consigo entender</p>
-                              
+
                               <br>
                               <p>
                                    - Rinorí: Eu nunca imaginei que seria tão difícil, passar por isso tudo
                                    mas, vamos conseguir é só não nos perdermos e focar que tudo vai se ajustar.
                               </p>
                               <br>
-                              <p> 
+                              <p>
                                    -Elinthy: Vamos nos preparar pessoal, vamos permanecer juntos até o último de nós
                                    cair.
                               </p>
+                              <br>
                               <center>
-                                   <button onclick="pensamentos()" title="História">Ler Pensamentos</button>
-                         </center>
+                                   <a href="pensamento.html">Ler Pensamentos</a>
+                              </center>
                               <br>
                               <p>
                                    Scarlett por sua vez se deixou levar de mais.
@@ -291,24 +357,24 @@ http://www.tooplate.com/view/2085-neuron
                               <br>
                               <p>
                                    "Ela escutava as almas gritando e chorando naquela vila que perdeu completamente a
-                                noção do que fazer,
-                                e deixou que as almas e a terra devorarem sua alma,
-                                ali caída no chão ela viu a cena do que havia acontecendo,
-                                morte, cinzas, dor, ódio gélido, uma força quem não tinha ideia de onde vinha,
-                                os soldados corriam, não, não eram soldados,  eram criaturas piores do que 
+                                   noção do que fazer,
+                                   e deixou que as almas e a terra devorarem sua alma,
+                                   ali caída no chão ela viu a cena do que havia acontecendo,
+                                   morte, cinzas, dor, ódio gélido, uma força quem não tinha ideia de onde vinha,
+                                   os soldados corriam, não, não eram soldados, eram criaturas piores do que
 
                               </p>
                          </div>
                          <div>
-                              
-                              <p>    
-                                haviam
-                                encontrado na ruína,
-                                e em meio a tanto desespero ela viu uma criança agachada em baixo de alguns escombros
-                                seu rosto era de puro terror,
-                                ela não deveria falar com nenhuma daquelas almas, mas então correu até aquela
-                                criança, era uma linda menina,
-                                de olhos verdes cabelos castanhos enrolados.
+
+                              <p>
+                                   haviam
+                                   encontrado na ruína,
+                                   e em meio a tanto desespero ela viu uma criança agachada em baixo de alguns escombros
+                                   seu rosto era de puro terror,
+                                   ela não deveria falar com nenhuma daquelas almas, mas então correu até aquela
+                                   criança, era uma linda menina,
+                                   de olhos verdes cabelos castanhos enrolados.
                               </p>
                               <br>
                               <img src="images/crianca.jpg" height="210px" width="300px" alt="">
@@ -323,7 +389,7 @@ http://www.tooplate.com/view/2085-neuron
                                    matou meus pais enquanto eu fugia ele vai vim me buscar, estou com medo,
                                    moça me mate antes que ele me faça sofrer, por favor,
                                    liberte a minha alma eu não quero sofrer.</p>
-                                   <p>-Scarlett: Eu não posso te matar por favor não me peça isso.</p>
+                              <p>-Scarlett: Eu não posso te matar por favor não me peça isso.</p>
                               <p>-Menina: Há algumas coisas moça que não tem que ser entendidas, apenas faça e poupe
                                    minha alma.</p>
                               <br>
@@ -337,33 +403,33 @@ http://www.tooplate.com/view/2085-neuron
                                    esforçou e perguntou qua.. qual seu nome?
                               </p>
                               <br>
-                              <p> 
+                              <p>
                                    -Menina: Dana moça, meu nome é Dana. Disse a menina com os
                               </p>
                          </div>
                          <div>
-                              <p> 
+                              <p>
                                    olhos escorrendo lágrimas.
-                              </p>    
-                              <p> 
+                              </p>
+                              <p>
                                    -Scarlett: Descanse em paz Dana, sempre me lembrarei de você.
                               </p>
                               <br>
-                              <p> 
+                              <p>
                                    Então Scarlett perfurou o coração da garota,
                                    com a adaga que ela dera,em seguida caiu de joelhos gritando e chorando,
                                    segurando a adaga firme em suas mãos".
-                               </p>   
-                              <img src="images/adaga.jpeg" title="Adaga" alt="adaga"> 
+                              </p>
+                              <img src="images/adaga.jpeg" title="Adaga" alt="adaga">
                               <br>
                               <p>
                                    Já fazia vinte minutos que Scarlett se contorcia na cama, Hiroki desesperado gritava
                                    seu nome a sacudindo,
                                    mas ela não acordava. Rinorí tentava acalmar Hiroki dizendo:
-                              </p> 
-                                                     
+                              </p>
+
                          </div>
-                         <div>    
+                         <div>
                               <br>
                               <p>-Rinorí: Calma Hiroki, ela deve estar em transe por conta de onde estamos, ela disse
                                    que estava sentindo as almas deste lugar ela vai voltar pra gente,
@@ -381,18 +447,18 @@ http://www.tooplate.com/view/2085-neuron
                               </p>
                               <br>
                               <p>
-                                   Aquela figura olhou para Scarlett e disse: 
+                                   Aquela figura olhou para Scarlett e disse:
                               </p>
                               <br>
                               <p>
-                                   -Voz: Eu sou Magnus Nightshade, aquele que lançou a profecia em 
+                                   -Voz: Eu sou Magnus Nightshade, aquele que lançou a profecia em
                               </p>
                          </div>
                          <div>
-                              
+
                               <p>
                                    você e seus
-                                   companheiros, 
+                                   companheiros,
                                    quem diria que pobres mortais como vocês seriam atingidos tão facilmente,
                                    com seus corações tolos..
                               </p>
@@ -401,7 +467,7 @@ http://www.tooplate.com/view/2085-neuron
                                    <button onclick="magnus()" title="História">Ler História Do Magnus</button>
                               </center>
                               <br>
-                              <p> 
+                              <p>
                                    -Scarlett: Do que você está falando? Quer dizer que você foi o culpado de tudo isso,
                                    qual seu problema com a gente?
                               </p>
@@ -413,7 +479,7 @@ http://www.tooplate.com/view/2085-neuron
                               <br>
                               <p>
                                    Há muito tempo atrás meu Reino "Fall", era conhecido por ser o reino onde havia o
-                                   conhecimento de todo o mundo. 
+                                   conhecimento de todo o mundo.
                               </p>
                               <br>
                               <p>
@@ -423,9 +489,9 @@ http://www.tooplate.com/view/2085-neuron
                                    "animalzinho de estimação", e viajo pelo mundo, usurpando todos os tronos, mas
                               </p>
                          </div>
-                         <div> 
-                           <br>
-                              <p> 
+                         <div>
+                              <br>
+                              <p>
                                    um horrível dia quando cheguei nesse vilarejo,
                                    um sábio velho me disse que quatro pessoas de um certo lugar perto desta terra me
                                    derrotaria,
@@ -438,17 +504,18 @@ http://www.tooplate.com/view/2085-neuron
                                    faço maravilhas com os poderes de vocês em troca não os mato, pense Scarlett.</p>
                               <br>
                               <p>
-                                   Magnus segurou Scarlett pelo pescoço e a mostrou, saindo pelo mundo ao lado de Magnus,
+                                   Magnus segurou Scarlett pelo pescoço e a mostrou, saindo pelo mundo ao lado de
+                                   Magnus,
                                    matando inocentes por puro prazer seus amigos saqueando e matando reino após reino,
-                                   ela viu como seriam se falhasse em sua última jornada, 
+                                   ela viu como seriam se falhasse em sua última jornada,
                                    seriam completamente malignos assim como Magnus,
                                    mas não podia abandonar seus amigos tinha que voltar e contar a eles, então ela
-                                   disse: 
+                                   disse:
                               </p>
                               <br>
                               <p>
                                    -Scarlett: Nunca vamos aliar a você. então ela cuspiu em seu rosto,
-                                   seu nariz sangrava e sua cabeça latejava mas, foi ai que ela 
+                                   seu nariz sangrava e sua cabeça latejava mas, foi ai que ela
                               </p>
                          </div>
                          <div>
@@ -463,7 +530,7 @@ http://www.tooplate.com/view/2085-neuron
                                    Então Dana estava perto dela segurou sua mão e disse:
                               </p>
                               <br>
-                              <p>                                 
+                              <p>
                                    -Dana: Isso é por ter salvo minha vida volte para seus amigos.
                               </p>
                               <br>
@@ -473,10 +540,10 @@ http://www.tooplate.com/view/2085-neuron
                                    Hiroki perdeu a cabeça quando viu o sangue escorrer do nariz de Scarlett,
                                    gritou mais do que uma banshee tomou-a em seu colo e ela chorou e chorou,
                                    ficando ali durante um bom tempo sem dizer uma palavra, até que tomou coragem e
-                                   começou a falar.                                  
+                                   começou a falar.
                               </p>
                               <p>
-                                   Disse que Elinthy estava certa sobre a guerra, contou sobre o ocorrido com 
+                                   Disse que Elinthy estava certa sobre a guerra, contou sobre o ocorrido com
                                    Dana,
                                    e falou sobre Magnus a profecia e a visão horrível que ele dera a ela, todos
                                    permaneceram calados,
@@ -493,7 +560,8 @@ http://www.tooplate.com/view/2085-neuron
                                    mas agora sabemos o motivo e aprendemos muitos em nossa jornada até aqui.
                               </p>
                               <p>
-                                   -Elinthy: Sim e de fato ele tem medo se não, não teria dado a oferta de nos aliarmos a
+                                   -Elinthy: Sim e de fato ele tem medo se não, não teria dado a oferta de nos aliarmos
+                                   a
                                    ele,
                                    e te dando essa visão,
                                    acho que ele está com medo de nós.
@@ -512,18 +580,19 @@ http://www.tooplate.com/view/2085-neuron
                                    Elinthy levantou sua espada e disse:
                               </p>
                               <br>
-                              <p> 
+                              <p>
                                    -Elinthy: A amizade, que até aqui nos fez fortes!</p>
                          </div>
                          <div>
 
-                              
+
                               <br>
                               <p>Rinorí levantou seu cajado e disse:</p>
                               <br>
                               <p>-Rinorí: A amizade, que até aqui nos fez fortes!</p>
                               <br>
-                              <img src="images/crytal.webp" height="280px" width="300px" title="Floco de Gelo" alt="crystal">
+                              <img src="images/crytal.webp" height="280px" width="300px" title="Floco de Gelo"
+                                   alt="crystal">
                          </div>
                          <div>
                               <br>
@@ -619,7 +688,7 @@ http://www.tooplate.com/view/2085-neuron
                                              <option value="4">Reino de Trundlea (Fica ao Noroeste da floresta de gelo)
                                              </option>
                                         </select>
-                                        <br><br> 
+                                        <br><br>
                                         <button onclick="enviar()">Enviar</button>
                                         <div id="erro">
                                         </div>
@@ -650,9 +719,7 @@ http://www.tooplate.com/view/2085-neuron
                var $bttn_next = $('#next_page_button');
                var $bttn_prev = $('#prev_page_button');
                var startPage = 1;
-               if(localStorage.getItem("magnusPage")){
-                    startPage = localStorage.getItem("magnusPage");
-               }
+
 
                $bttn_next.show();
                $bttn_prev.show();
@@ -673,14 +740,6 @@ http://www.tooplate.com/view/2085-neuron
 
      </script>
      <script>
-          function pensamentos(){
-               localStorage.setItem("magnusPage", 5);
-               window.location = "pensamento.html";
-          }
-          function magnus(){
-               localStorage.setItem("magnusPage", 9);
-               window.location = "magnus.html";
-          }
           function enviar() {
                var escolha = document.getElementById("magnus").value;
                if (escolha == "3") {
@@ -690,6 +749,9 @@ http://www.tooplate.com/view/2085-neuron
                     var erro = document.getElementById("erro").innerHTML = "Resposta Errada :( ";
                     return erro;
                }
+          }
+          function menu(capitulo) {
+               window.location = capitulo;
           }
      </script>
 
