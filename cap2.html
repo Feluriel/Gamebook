@@ -348,7 +348,7 @@ http://www.tooplate.com/view/2085-neuron
                               </p>
                               <br>
                               <center>
-                                   <a href="pensamento.html">Ler Pensamentos</a>
+                                   <button onclick="pensamentos()" title="História">Ler Pensamentos</button>
                               </center>
                               <br>
                               <p>
@@ -719,7 +719,9 @@ http://www.tooplate.com/view/2085-neuron
                var $bttn_next = $('#next_page_button');
                var $bttn_prev = $('#prev_page_button');
                var startPage = 1;
-
+               if(localStorage.getItem("magnusPage")){
+                    startPage = localStorage.getItem("magnusPage");
+               }
 
                $bttn_next.show();
                $bttn_prev.show();
@@ -740,6 +742,14 @@ http://www.tooplate.com/view/2085-neuron
 
      </script>
      <script>
+       function pensamentos(){
+               localStorage.setItem("magnusPage", 5);
+               window.location = "pensamento.html";
+          }
+          function magnus(){
+               localStorage.setItem("magnusPage", 9);
+               window.location = "magnus.html";
+          }
           function enviar() {
                var escolha = document.getElementById("magnus").value;
                if (escolha == "3") {

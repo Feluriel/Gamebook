@@ -103,7 +103,7 @@ http://www.tooplate.com/view/2085-neuron
             margin: 0 auto;
             padding-top: 50px;
             width: 905px;
-            height: 620px;
+
             position: relative;
             background: transparent url(images/bg.png) no-repeat 9px 27px;
             text-align: justify;
@@ -401,7 +401,6 @@ http://www.tooplate.com/view/2085-neuron
                         </p>
                     </div>
                     <div>
-                        <section class="spacing contact">
                             <div class="container">
                                 <center>
                                     <h2>
@@ -425,7 +424,7 @@ http://www.tooplate.com/view/2085-neuron
                                 <div id="erro">
                                 </div>
                             </div>
-                        </section>
+                        
                     </div>
                 </div>
             </div>
@@ -467,6 +466,18 @@ http://www.tooplate.com/view/2085-neuron
     </script>
     <script>
         function enviar() {
+            var escolha = document.getElementById("magnus").value;
+            if (escolha == "3") {
+                //document.getElementById("gamebook").src = "cap2.html";
+                window.location = "cap3.html";
+            } else {
+                var erro = document.getElementById("erro").innerHTML = "Resposta Errada :( ";
+                return erro;
+            }
+        }
+    </script>
+    <script>
+        function enviar() {
             var escolha = document.getElementById("personagens").value;
             if (escolha == "escolha1") {
                 //document.getElementById("gamebook").src = "cap2.html";
@@ -490,6 +501,7 @@ http://www.tooplate.com/view/2085-neuron
             window.location = capitulo;
         }
     </script>
+    
 
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
