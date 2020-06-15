@@ -1,0 +1,45 @@
+{
+    "response_code": 0,
+    "results": [
+        {   "question": "Após terminar seu treinamento em uma masmorra, se depara com um baú com armamentos. Qual o armamento ideal para você?",
+            "answers": [
+                "Espada",
+                "Cajado",
+                "Cetro",
+                "Lança"
+            ]
+        },
+        {   "question": "Um antigo templo foi saqueado por ladrões, que deixaram vários feridos pela região. O que você faz?",
+            "answers": [
+                "Furtivamente roubar os ladrões e as vítimas enquanto os ajuda",
+                "Tacaria fogo nos ladrões em fuga",
+                "Passa direto",
+                "Usa a  natureza em seu favor para parar os ladrões "
+            ]
+        },
+        {   "question": "O que é mais importante para você na jornada?",
+            "answers": [
+                "Construir um domínio próprio, sem se importar com o custo",
+                "Ter mais habilidade de combate",
+                "Conhecer mais magia poderosa, e ser o mais sábio",
+                "Proteger a natureza"
+            ]
+        },
+        {   "question": "Durante um combate com sua equipe...",
+            "answers": [
+                "Prefere tomar linha de frente para proteger sua equipe",
+                "Causar dano de perto",
+                "Causar dano de longe usando magia",
+                "Posso fazer os 3 anteriores?"
+            ]
+        },
+        {   "question": "Você pretende ficar mais poderoso para um próximo desafio. Qual  método  você usaria para aperfeiçoar seus poderes?",
+            "answers": [
+                "Concedendo favor á uma entidade que me conceda poderes devastadores",
+                "Lendo grimórios e tomos a sabedoria está nos livros",
+                "Com vários treinos e pratica, a magia é inata em mim",
+                "Mantendo a natureza em perfeito equilíbrio, não insultando os espíritos"
+            ]
+        }
+    ]
+}
