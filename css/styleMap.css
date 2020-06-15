@@ -32,3 +32,10 @@
     top: 0;
     margin: 10px;
 }
+.image-map{
+    margin: 0 auto;
+}
+.bg-map{
+    background-image: url(../images/textura.jpg);
+    background-size: cover;
+}

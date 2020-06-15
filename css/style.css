@@ -848,5 +848,10 @@ h1 {
    /* Para ficar na mesma altura do link */
   opacity: 1;  
 }
-
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%!important;
+}
 
