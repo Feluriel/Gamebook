@@ -19,7 +19,7 @@ let questions = [];
 
 /* Local TRIVIA : url */
 fetch(
-        "https://questionsjson.imfast.io/questions.json"
+        "https://theageofexiles.imfast.io/quiz/src/json/questions.json"
     ) 
     .then(res => {        
         return res.json();
@@ -113,9 +113,9 @@ choices.forEach(choice => {
                 break;
             }
             case '2':{
-                let point = localStorage.getItem('mostPointsScarlet');
+                let point = localStorage.getItem('mostPointsRinori');
                 point++;
-                localStorage.setItem('mostPointsScarlet', point);
+                localStorage.setItem('mostPointsRinori', point);
                 break;
             }
             case '3':{
@@ -125,9 +125,9 @@ choices.forEach(choice => {
                 break;
             }
             case '4':{
-                let point = localStorage.getItem('mostPointsRinori');
+                let point = localStorage.getItem('mostPointsScarlet');
                 point++;
-                localStorage.setItem('mostPointsRinori', point);
+                localStorage.setItem('mostPointsScarlet', point);
                 break;
             }
         }
