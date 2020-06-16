@@ -19,7 +19,7 @@ let questions = [];
 
 /* Local TRIVIA : url */
 fetch(
-        "http://localhost/src/json/questions.json"
+        "https://questionsjson.imfast.io/questions.json"
     ) 
     .then(res => {        
         return res.json();

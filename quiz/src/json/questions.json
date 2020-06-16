@@ -1,7 +1,7 @@
 {
     "response_code": 0,
     "results": [
-        {   "question": "Após terminar seu treinamento em uma masmorra, se depara com um baú com armamentos. Qual o armamento ideal para você?",
+        {   "question": "Após terminar seu treinamento em uma masmorra, você se depara com um baú de armamentos. Qual a arma ideal para você?",
             "answers": [
                 "Espada",
                 "Cajado",
@@ -9,10 +9,10 @@
                 "Lança"
             ]
         },
-        {   "question": "Um antigo templo foi saqueado por ladrões, que deixaram vários feridos pela região. O que você faz?",
+        {   "question": "Um antigo templo foi saqueado por ladrões que deixaram vários feridos pela região. O que você faz?",
             "answers": [
-                "Furtivamente roubar os ladrões e as vítimas enquanto os ajuda",
-                "Tacaria fogo nos ladrões em fuga",
+                "Furtivamente rouba os ladrões e as vítimas enquanto os ajuda",
+                "Taca fogo nos ladrões em fuga",
                 "Passa direto",
                 "Usa a  natureza em seu favor para parar os ladrões "
             ]
@@ -28,15 +28,15 @@
         {   "question": "Durante um combate com sua equipe...",
             "answers": [
                 "Prefere tomar linha de frente para proteger sua equipe",
-                "Causar dano de perto",
-                "Causar dano de longe usando magia",
+                "Prefere causar dano de perto",
+                "Prefere causar dano de longe usando magia",
                 "Posso fazer os 3 anteriores?"
             ]
         },
-        {   "question": "Você pretende ficar mais poderoso para um próximo desafio. Qual  método  você usaria para aperfeiçoar seus poderes?",
+        {   "question": "Você pretende ficar mais poderoso para o próximo desafio. Qual método você usaria para aperfeiçoar seus poderes?",
             "answers": [
-                "Concedendo favor á uma entidade que me conceda poderes devastadores",
-                "Lendo grimórios e tomos a sabedoria está nos livros",
+                "Concede favor a uma entidade que em troca dê poderes devastadores",
+                "Lê grimórios e tomos. A sabedoria está nos livros",
                 "Com vários treinos e pratica, a magia é inata em mim",
                 "Mantendo a natureza em perfeito equilíbrio, não insultando os espíritos"
             ]
