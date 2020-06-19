@@ -18,22 +18,22 @@ var imgHero = "";
 switch(scoresIndex){
     case 0:{
         hero = "Elinthy";
-        imgHero ="../../images/elinthycard.jpg";
+        imgHero ="../../../images/elinthycard.jpg";
         break;
     }
     case 1:{
-        hero = "Scarlet";
-        imgHero ="../../images/scarlletcard.jpg";
+        hero = "Rinori";
+        imgHero = "../../../images/rinoricard.jpg";
         break;
     }
     case 2:{
         hero = "Hiroki";
-        imgHero ="../../images/hirokicard.jpg";
+        imgHero ="../../../images/hirokicard.jpg";
         break;
     }
     case 3:{
-        hero = "Rinori";
-        imgHero ="../../images/rinoricard";
+        hero = "Scarlet";
+        imgHero ="../../../images/scarlletcard.jpg";
         break;
     }
 }
