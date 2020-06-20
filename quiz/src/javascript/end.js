@@ -9,7 +9,7 @@ const rinori = localStorage.getItem("mostPointsRinori");
 const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
 const cardHero = document.getElementById("cardHero");
 const MAX_HIGH_SCORES = 5;
-const scores = [elinthy, scarlet, hiroki, rinori];
+const scores = [elinthy, rinori, hiroki, scarlet];
 
 var maxValue = Math.max.apply(Math, scores);
 var scoresIndex = scores.indexOf(maxValue.toString());
