@@ -254,6 +254,15 @@ http://www.tooplate.com/view/2085-neuron
 
      <!-- Home Section -->
      <section>
+          <div class="dropdown">
+               <button class="dropbtn">Capítulos</button>
+               <div class="dropdown-content">
+                    <a onclick="menu('index.html')">Home</a>
+                    <a onclick="menu('cap1.html')">Capítulo 1</a>
+                    <a onclick="menu('cap2.html')">Capítulo 2</a>
+                    <a onclick="menu('cap3.html')">Capítulo 3</a>
+               </div>
+          </div>
           <div class="book_wrapper">
                <a id="next_page_button"></a>
                <a id="prev_page_button"></a>
@@ -544,9 +553,9 @@ http://www.tooplate.com/view/2085-neuron
                                    castelo, que se explodiu atrás dele mais continuou andando, com um sorriso maligno em
                                    seu rosto, e lá foi ele, para o Vilarejo matar todos que fizeram mal para seu lobo.
                               </p>
-                              <br>
 
                               <img src="images/emchamas.jpg" height="220px" alt="chamas" title="Castelo em Chamas">
+                              <p><button style="float: right; " onclick="enviar()">Ler outos finais</button></p>
                          </div>
                     </div>
                </div>
@@ -584,15 +593,8 @@ http://www.tooplate.com/view/2085-neuron
 
      </script>
      <script>
-          function enviar() {
-               var escolha = document.getElementById("personagens").value;
-               if (escolha == "scarlett") {
-                    //document.getElementById("gamebook").src = "cap2.html";
-                    window.location = "cap2.html";
-               } else {
-                    var erro = document.getElementById("erro").innerHTML = "Resposta Errada :( ";
-                    return erro;
-               }
+         function enviar() {
+               window.location = "cap3.html";
           }
           function menu(capitulo) {
                window.location = capitulo;

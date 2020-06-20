@@ -254,6 +254,15 @@ http://www.tooplate.com/view/2085-neuron
 
      <!-- Home Section -->
      <section>
+          <div class="dropdown">
+               <button class="dropbtn">Capítulos</button>
+               <div class="dropdown-content">
+                    <a onclick="menu('index.html')">Home</a>
+                    <a onclick="menu('cap1.html')">Capítulo 1</a>
+                    <a onclick="menu('cap2.html')">Capítulo 2</a>
+                    <a onclick="menu('cap3.html')">Capítulo 3</a>
+               </div>
+          </div>
           <div class="book_wrapper">
                <a id="next_page_button"></a>
                <a id="prev_page_button"></a>
@@ -416,7 +425,7 @@ http://www.tooplate.com/view/2085-neuron
                               <br>
                               <br>
                               <br>
-                              <p><strong>FIM...</strong></p>
+                              <p><button style="float: right; " onclick="enviar()">Ler outos finais</button></p>
                          </div>     
                     </div>
                </div>
@@ -458,14 +467,7 @@ http://www.tooplate.com/view/2085-neuron
      </script>
      <script>
           function enviar() {
-               var escolha = document.getElementById("personagens").value;
-               if (escolha == "scarlett") {
-                    //document.getElementById("gamebook").src = "cap2.html";
-                    window.location = "cap2.html";
-               } else {
-                    var erro = document.getElementById("erro").innerHTML = "Resposta Errada :( ";
-                    return erro;
-               }
+               window.location = "cap3.html";
           }
           function menu(capitulo) {
                window.location = capitulo;
