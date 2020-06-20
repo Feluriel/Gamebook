@@ -1,50 +1,43 @@
 <?php
+$name = $_POST['nome'];
+//pega os dados que foi digitado no ID name.
 
-$nome = $_POST['nome']; // Nome de quem esta enviando
-$d_email = $_POST['email'];  // Email destinatário
-$assunto = $_POST['assunto']; //Assunto  do Email
-$mensagem = $_POST['mensagem']; //Mensagem do Email
+$email = $_POST['email'];
+//pega os dados que foi digitado no ID email.
 
-require 'PHPMailerAutoload.php';
-// Incluir a class class.phpmailer.php
-date_default_timezone_set('America/Sao_Paulo');
-// Caso queira ter data no email
+$subject = $_POST['assunto'];
+//pega os dados que foi digitado no ID sebject.
 
+$message = $_POST['mensagem'];
+//pega os dados que foi digitado no ID message.
+$myEmail = "theageofexiles@gmail.com";//é necessário informar um e-mail do próprio domínio
+$headers = "From: $myEmail\r\n";
+$headers .= "Reply-To: $email\r\n";
 
-$mail = new PHPMailer();
-$mail->IsSMTP(); // Send via SMTP
-$mail->Host = "smtp.gmail.com"; // Seu servidor SMTP
-$mail->SMTPAuth = true; // 'true' para autenticaÃ§Ã£o
-$mail->Username = "theageofexiles@gmail.com"; // UsuÃ¡rio de SMTP
-$mail->Password = "oloko.com"; // Senha de SMTP
-$mail->SMTPDebug = 1;  
-$mail->SMTPSecure = "tls";s
-$mail->Port = 587;
-$mail->AddAddress("theageofexiles@gmail.com","Gabriel");
+/*abaixo contém os dados que serão enviados para o email
+cadastrado para receber o formulário*/
 
-ini_set('max_execution_time','2000');
-// Aumenta o tempo de execuÃ§Ã£o do servidor "2000 segundos"
+$corpo = "Formulário enviado\n";
+$corpo .= "Nome: " . $name . "\n";
+$corpo .= "Email: " . $email . "\n";
+$corpo .= "Assunto: " . $subject . "\n";
+$corpo .= "Mensagem: " . $message . "\n";
 
-$mail->IsHTML(true); // Envio como HTML se 'true'
-$mail->Subject = $assunto;    // Envia o assunto
-$mail->Body = "Assunto: $assunto\nMensagem: $mensagem\nE:mail: $d_email\nNome: $nome" ;
-// Envia o titulo
+$email_to = "theageofexiles@gmail.com";
+//não esqueça de substituir este email pelo seu.
 
-$mail->AltBody = "Para mensagens somente texto";
-// Envia corpo da msg
+$status = mail($email_to, $subject, $corpo, $headers);
+//enviando o email.
 
+if ($status) {
+  echo "<script> window.location='contact.html';alert('$name sua mensagem foi enviada com sucesso! Estaremos retornando em breve');</script>";
+  
+//mensagem de form enviado com sucesso.
 
-if 
-(!$mail-> Send ()) 
+} else {
+  echo "<script> alert('Falha ao enviar o Email.'); </script>";
+  
+//mensagem de erro no envio. 
 
-{
-  echo "Erro ao enviar email.";
 }
-else
-{
-   echo "<script> window.location='contact.html';alert('$email sua mensagem foi enviada com sucesso! Estaremos retornando em breve');</script>";
-}
-
-
-
- ?>
+?>
